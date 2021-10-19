@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+
+  <meta name="description" content="Formulario de contacto. Contactate. Hace una consulta gratis.">
+  <meta name="keywords" content="consulta gratis, comunicate, contactate.">
+  
+
+  <!-- Loguito del Estudio -->
+  <link rel="shortcut icon" href="../assets/logosYColores/logo1.png" type="image/png">
+  <!-- Iconos de facebook, Intagram y Twiter -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+  <!-- Libreria AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <link rel="stylesheet" href="../sass/main.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <section class="navbar-expand-md navbar-collapse encabezado__contactanos">
+      <div><span> <strong>Consultas Urgentes al</strong></span> <i class="fas fa-phone-square"></i> Tel. 2658-5869</div>
+      <ul>
+          <!-- Lista de iconos: facebook, Instagram, Twiter -->
+          <li class="encabezado__iconos"><a href="#"><i class="fab fa-facebook encabezado__iconos--color"></i></a></li>
+          <li class="encabezado__iconos"><a href="#"><i class="fab fa-instagram encabezado__iconos--color"></i></a></li>
+          <li class="encabezado__iconos"><a href="#"><i class="fab fa-whatsapp encabezado__iconos--color"></i></i></a></li>
+      </ul>
+  </section>
+      <!-- menu navegable -->
+      <nav class="navbar navbar-expand-lg navbar-light encabezado__nav">
+          <div class="container-fluid">
+              <a class="navbar-brand" href="../index.html"><img class="encabezado__logo" src="../assets/logosYColores/logo2.png"
+                      alt="logo" width="220vh" height="80vh"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                  aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+
+
+                  <ul class="lista">
+                      <li><a href="../pages/nosotros.html" class="lista__item">Nosotros</a></li>
+                      <li><a href="../pages/especialidades.html" class="lista__item">Especialidades</a></li>
+                      <li><a href="../pages/testimonios.html" class="lista__item">Testimonios</a></li>
+                      <li><a href="../pages/contacto.html" class="lista__item lista__item--activo">Contacto</a></li>
+                  </ul>
+              </div>
+          </div>
+      </nav>
+  </header>
+
+  <main class="contacto">
+    <!-- Formulario de Contacto -->
+    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
+      <form action="" method="GET" class="formulario">
+        <fieldset class="formulario__bg">
+          <legend class="formulario__color"><strong>CONTACTANOS</strong></legend>
+          <p class="formulario__parrafo">Para comunicarse con nosotros complete el siguiente <br> formulario. Deje al
+            final su mensaje. <br>
+            A la brevedad un profesional especializado <br> en la materia se comunicara con Ud. <br>
+            Desde ya muchas gracias por confiar en nosotros.</p>
+          <div class="formulario__divisiones">
+            <label for="name"></label>
+            <input class="formulario__divisiones--input" type="text" name="name" id="name" placeholder="Nombre y Apellido" required />
+          </div>
+          <div class="formulario__divisiones">
+            <label for="mail"></label>
+            <input class="formulario__divisiones--input" type="text" name="mail" id="mail" placeholder="Correo Electronico" required />
+          </div>
+          <div class="formulario__divisiones">
+            <label for="telephone"></label>
+            <input class="formulario__divisiones--input" type="text" name="telephone" id="telephone" placeholder="Telefono" required />
+          </div>
+          <div class="formulario__divisiones">
+            <label for="area"></label>
+            <input class="formulario__divisiones--input" type="text" name="area" id="area" placeholder="Materia" required />
+          </div>
+          <div class="formulario__divisiones">
+            <label for="mensaje"></label>
+            <textarea class="formulario__divisiones--text-area" name="mensaje" id="mensaje" cols="50" rows="10"></textarea>
+          </div>
+          <div>
+            <label for="radio" class="formulario__color">Si el contenido es correcto haga click</label>
+            <input type="checkbox" />
+          </div>
+          <div>
+            <input type="reset" value="RESET" class="reset" />
+            <input type="submit" value="ENVIAR" class="enviar" />
+          </div>
+        </fieldset>
+      </form>
+    </div>
+  </main>
+
+  <div class="container-fluid preguntas p-4">
+    <div class="row d-flex justify-content-center">
+      <h3 class="d-flex justify-content-center text-decoration-underline text-white p-4">Preguntas Frecuentes</h3>
+
+      <div class="accordion col-lg-10" id="accordionPanelsStayOpenExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+              aria-controls="panelsStayOpen-collapseOne">
+              Si queremos concurrir personalmente al Estudio Juridico: ¿Cual es el horario de atencion?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+            aria-labelledby="panelsStayOpen-headingOne">
+            <div class="accordion-body">
+              El horario de atencion en nuestras oficinas es de 9 a 17 horas, de lunes a viernes.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseTwo">
+              Ante una urgencia fuera del horario de atencion: ¿Como puedo contactarlos?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingTwo">
+            <div class="accordion-body">
+              Ante una urgencia fuera del horario de atencion comuniquese al 0810-555-4856.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+              aria-controls="panelsStayOpen-collapseThree">
+              Si completo el formulario de la pagina: ¿Cuanto tiempo demoran en responder?
+            </button>
+          </h2>
+          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+            aria-labelledby="panelsStayOpen-headingThree">
+            <div class="accordion-body">
+              Ud. tendra una respuesta dentro de las 24 horas habiles.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <footer class="pie">
+    <!-- pie de pagina -->
+    <div class="pie__logo">
+        <a href="./index.html"><img src="../assets/logosYColores/logo1.png" alt="logo1" width="150" height="120"></a>
+    </div>
+    <section class="pie__pag">
+        <h3 class="pie__pag--tit">Paginas de Interes</h3>
+        <!-- Lista de paginas juridicas de interes -->
+        <ul class="pie__lista">
+            <li><a href="https://www.pjn.gov.ar/" class="pie__lista--item">pagina web del poder judicial de la Nacion</a></li>
+            <li><a href="http://www.juscorrientes.gov.ar/" class="pie__lista--item">pagina web del poder judicial de la Pcia.</a></li>
+            <li><a href="https://iol.juscorrientes.gov.ar/" class="pie__lista--item">Iurix Online Pcia. de Corrientes</a></li>
+            <li><a href="https://colegioquinta.com/" class="pie__lista--item">pagina web del Colegio de Abogados</a></li>
+        </ul>
+    </section>
+    <section class="pie__dir">
+        <address><i class="fas fa-map-marker-alt"></i><strong> Av. Lavalle 291</strong><br>Ciudad - Provincia
+        </address>
+        <p><i class="fas fa-phone-square"></i> Tel. 2658-5869</p>
+        <p><i class="far fa-envelope"></i> E-mail: estudjco@gmail.com</p>
+    </section>
+    <section class="redes">
+        <ul class="pie__redes">
+            <!-- Lista de iconos: facebook, Instagram, Twiter -->
+            <li class="pie__iconos"><a href="#"><i class="fab fa-facebook pie__iconos--color"></i></a></li>
+            <li class="pie__iconos"><a href="#"><i class="fab fa-instagram pie__iconos--color"></i></a></li>
+            <li class="pie__iconos"><a href="#"><i class="fab fa-whatsapp pie__iconos--color"></i></i></a></li>
+        </ul>
+    </section>
+</footer>
+<div class="copyright">
+    <p>Copyright <i class="far fa-copyright"></i> -Todos los derechos reservados-</p>
+</div>
+<!-- Script de Libreria AOS -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init({
+        once: true
+    });
+</script>
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous">
+</script>
+
+</body>
+
+</html>

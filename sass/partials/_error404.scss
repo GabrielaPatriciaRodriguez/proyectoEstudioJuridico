@@ -1,0 +1,26 @@
+@import "./variables";
+@import "./reset";
+@import "./fuente";
+@import "./responsive";
+
+.error {
+    display: flex;
+    background-image: url(../assets/error.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+    margin-top: 150px;
+    overflow: hidden;
+  
+    @include movil {
+      justify-content: center;
+      padding-left: 0px;
+      margin-top: auto;
+    }
+  
+    @include tablet2 {
+      justify-content: center;
+      padding-left: 0px;
+    }
+  }

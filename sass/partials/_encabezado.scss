@@ -1,0 +1,108 @@
+@import "./variables";
+@import "./responsive";
+
+.encabezado {
+  height: 7.5rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  /* por la animacion */
+
+  @include movil {
+    position: relative;
+  }
+
+  &__contactanos {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: $gris;
+    position: relative;
+    color: $dorado;
+    min-height: 2rem;
+    border-style: solid;
+    border-width: 0px 0px 1px 0px;
+    border-color: #FFFFFF29;
+
+    & ul {
+      margin: 2vh;
+    }
+
+    & ul li {
+      display: inline;
+      margin: auto 1vh auto 1vh;
+    }
+
+    @include movil {
+      display: none;
+    }
+  }
+
+  &__iconos {
+    @extend .pie__iconos;
+
+    &--color {
+      @extend .pie__iconos--color;
+    }
+  }
+
+  &__nav {
+    background-color: $gris;
+  }
+
+  &__logo {
+    object-fit: scale-down;
+    /* para ajustar la imagen al contenedor*/
+
+    /*colocandole una animacion de 3segundos al logo*/
+    animation-duration: 3s;
+    animation-name: aparecer;
+
+    @keyframes aparecer {
+      0% {
+        opacity: 0;
+      }
+
+      100% {
+        opacity: 1;
+      }
+
+    }
+  }
+}
+
+.lista {
+  list-style: none;
+  /*para que mi lista no tenga viñetas*/
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  /* Para que se distancien dejando espacio alrededor */
+  align-items: center;
+  /* y se centren */
+
+  /* Para que en movil se muestren en columna */
+  @include movil {
+    flex-direction: column;
+  }
+
+
+  &__item {
+    color: $blanco;
+    font-weight: normal;
+    font-size: 1.2rem;
+    text-decoration-line: none;
+    transition: all 1s;
+
+    /* transicion de 1segundo */
+    &:hover {
+      /*Cuando pase el mouse por el ancor de las listas el menu nav resalte la palabra en 
+     dorado y agrande la letra*/
+      color: $dorado;
+      font-size: 1.5rem;
+    }
+  }
+}

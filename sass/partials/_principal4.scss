@@ -1,0 +1,63 @@
+
+/* MAIN SECCION TESTIMONIOS*/
+@import "./variables";
+@import "./fuente";
+@import "./responsive";
+
+
+.testimonios {
+  background-image: url("../assets/tinified/clientesFelices.jpeg");
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  padding: 5rem;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+
+  @include tablet {
+    justify-content: center;
+    flex-direction: column;
+    padding: 0%;
+  }
+
+  &__secciones {
+    margin: 3rem;
+    width: 20rem;
+    background-color: $blancoTransparente;
+    border-radius: 10%;
+    padding: 2rem;
+    font-style: italic;
+    font-size: 1rem;
+    color: $negro;
+    box-shadow: $boxshadowTestimonios;
+
+    @include tablet {
+      width: 15rem;
+      font-size: 0.9rem;
+    }
+
+    @include tablet2 {
+      margin: 5rem;
+      width: 37rem;
+      border-radius: 5px;
+    }
+  }
+
+  &__datos {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 2rem;
+
+    &--foto {
+      border-radius: 50%;
+    }
+
+    &--cliente {
+      font-size: 0.8rem;
+      margin-left: 1rem;
+      font-weight: normal;
+    }
+  }
+}

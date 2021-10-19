@@ -1,0 +1,98 @@
+/* MAIN SECCION CONTACTO*/
+@import "./variables";
+@import "./fuente";
+@import "./responsive";
+
+
+.contacto {
+  display: flex;
+  justify-content: left;
+  background-image: url("../assets/tinified/formulario.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 200px;
+  margin-top: auto;
+  overflow: hidden;
+
+  @include movil {
+    justify-content: center;
+    padding-left: 0px;
+  }
+
+  @include tablet2 {
+    justify-content: center;
+    padding-left: 0px;
+  }
+}
+
+.formulario {
+  text-align: center;
+  padding: 200px 50px 150px 50px;
+
+  @include movil {
+    padding: 0px;
+  }
+
+  &__bg {
+    background-color: $grisTransparente;
+  }
+
+  &__color {
+    color: $blanco;
+  }
+
+  &__parrafo {
+    font-size: 1rem;
+    padding-top: 0.8rem;
+    color: $blanco;
+    margin: 1rem;
+
+    @include movil {
+      font-size: 0.8rem;
+    }
+  }
+
+  &__divisiones {
+    margin: 20px;
+
+    @include movil {
+      margin: 10px;
+    }
+
+    &--input {
+      padding: 0.5rem 7rem 0.5rem 0;
+
+      @include movil {
+        padding-right: 6rem; 
+      }
+    }
+    
+    &--text-area {
+      width: 18rem;
+    }
+  }
+}
+
+.boton {
+  border-style: none;
+  padding: 5px;
+  border-radius: 10px;
+  margin: 20px;
+}
+
+.reset {
+  @extend .boton;
+  background-color: $blanco;
+  border-color: $negro;
+}
+
+.enviar {
+  @extend .boton;
+  background-color: $gris;
+  color: $blanco;
+}
+
+.preguntas {
+  background-color: $gris;
+}

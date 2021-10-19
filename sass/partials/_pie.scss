@@ -1,0 +1,168 @@
+@import "./variables";
+@import "./fuente";
+@import "./responsive";
+
+.pie {
+  display: flex;
+  /*Para que sus elementos sean flexibles y esten en linea*/
+  justify-content: space-around;
+  /* distancia entre sus elementos */
+  width: 100%;
+  /* Que ocupe el 100% del navegador*/
+  height: auto;
+  /*alto*/
+
+  /* Para que en movil el pie de pagina se muestre en columnas y centrado */
+  @include movil {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* utilizando gradientes para el fondo del footer*/
+  background: rgb(200, 177, 118);
+  background: -moz-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+  background: -webkit-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+  background: linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+
+  &__logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* En movil no se vera el logo ni paginas de interes */
+
+    @include movil {
+      display: none;
+    }
+  }
+
+  &__pag {
+    padding-top: 2rem;
+    /*margen superior*/
+    text-align: center;
+
+    &--tit {
+      color: $blanco;
+      /* color de letra */
+      text-decoration: underline;
+      /*subrayado*/
+      padding-bottom: 1rem;
+      /* padding inferior*/
+      text-align: center;
+      @include font-size(1rem, 1.4rem);
+
+      @include tablet {
+        padding-bottom: 0.5rem;
+      }
+    }
+
+    @include movil {
+      display: none;
+    }
+  }
+
+  &__lista {
+    list-style: none;
+
+    /* sin viñetas */
+    @include tablet {
+      font-size: small;
+    }
+
+    &--item {
+      color: $blanco;
+      /* color de letra */
+      text-decoration: none;
+
+      /*Sin subrayado */
+      &:hover {
+        color: $gris;
+      }
+    }
+  }
+
+  &__dir {
+    /* La direccion en el pie de pagina*/
+    padding-top: 2.5rem;
+    line-height: 1.5rem;
+    /* interlineado */
+    color: $blanco;
+    /* color de letra */
+    text-align: center;
+
+    @include movil {
+      padding-top: 1.5rem;
+      line-height: 1rem;
+    }
+
+    @include tablet {
+      font-size: small;
+      line-height: 1rem;
+    }
+  }
+
+  &__redes {
+    list-style: none;
+  }
+
+  &__iconos {
+    size: 2rem;
+    text-decoration: none;
+    padding: 0.3rem;
+    margin: 1.5rem;
+    border-radius: 50%;
+
+    @include tablet {
+      size: 1rem;
+      margin: 1rem;
+    }
+
+    &--color {
+      color: $blanco;
+
+      &:hover {
+        color: $dorado;
+      }
+    }
+  }
+
+  /* Para que en movil se vean los iconos de redes sociales en fila y centrados */
+  @include movil {
+    .redes {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .redes ul {
+      margin: 3vh;
+    }
+
+    .redes ul li {
+      display: inline;
+      margin: auto 2vh auto 2vh;
+    }
+  }
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  background: rgb(200, 177, 118);
+  background: -moz-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+  background: -webkit-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+  background: linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+  color: $blanco;
+  border-style: solid;
+  border-width: 1px 0px 0px 0px;
+  border-color: #FFFFFF29;
+
+  @include font-size(0.7rem, 0.9rem);
+}

@@ -1,0 +1,15 @@
+/*Main de seccion Nosotros*/
+
+.main {
+    z-index: 2;
+
+    &__bg {
+        background-color: $grisTransparente;
+    }
+}
+
+.lista__item--activo {
+    /*Para que cuando me encuentre en esa pagina este subrayado y en negrita*/
+    text-decoration: underline;
+    font-weight: bold;
+}
