@@ -636,12 +636,13 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   border-radius: 50%;
   height: 150px;
   width: 150px;
+  margin-bottom: 2rem;
 }
 
 .especialidades__item--parrafo {
   text-align: center;
   line-height: 2rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
   color: #3e474c;
   border-top: #3e474c solid;
   border-width: 1px;
