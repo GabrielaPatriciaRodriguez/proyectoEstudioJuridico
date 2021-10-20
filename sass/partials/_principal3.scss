@@ -59,12 +59,13 @@
             border-radius: 50%;
             height: 150px;
             width: 150px;
+            margin-bottom: 2rem;
         }
 
         &--parrafo {
             text-align: center;
             line-height: 2rem;
-            margin-top: 2rem;
+            margin-top: 1rem;
             color: $gris;
             border-top: $gris solid;
             border-width: 1px;
