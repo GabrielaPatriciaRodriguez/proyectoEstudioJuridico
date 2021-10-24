@@ -114,3 +114,80 @@ main {
     @include font-size(1rem, 1.2rem);
   }
 }
+
+
+.noticias {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 400px;
+  grid-template-areas:
+      "fotoArea1 fotoArea2 fotoArea3";
+  gap: 50px;
+  height: auto;
+  width: 100%;
+  background-color: $blanco;
+  place-items: center;
+  padding: 50px;
+  margin-top: 5px;
+  overflow: hidden;
+
+
+  @include tablet {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      grid-template-areas:
+      "fotoArea1"
+      "fotoArea2"
+      "fotoArea3";
+      gap: 1rem;
+      padding: 0.5rem;
+      margin-top: 20%;
+  }
+
+  &__item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      &--foto {
+          border-radius: 50%;
+          height: 250px;
+          width: 250px;
+          margin-bottom: 2rem;
+      }
+
+      &--ancor {
+          text-align: center;
+          line-height: 2rem;
+          margin-top: 1rem;
+          color: $gris;
+          border-top: $gris solid;
+          border-width: 1px;
+          @include font-size(1.2rem, 1rem)
+      }
+  }
+}
+
+
+
+.fotoArea1 {
+  grid-area: fotoArea1;
+  background-color: $blancoTransparente;
+  padding-top: 35px;
+  width: 20rem;
+  border-width: 1px;
+  @include movil {
+      width: auto;
+  }
+}
+
+.fotoArea2 {
+  grid-area: fotoArea2;
+  @extend .fotoArea1;
+}
+
+.fotoArea3 {
+  grid-area: fotoArea3;
+  @extend .fotoArea1;
+}
