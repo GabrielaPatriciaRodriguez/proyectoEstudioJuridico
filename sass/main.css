@@ -330,22 +330,6 @@ main {
   }
 }
 
-.titulo {
-  background: #c8b176;
-  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(200, 177, 118, 0.975228)), color-stop(93%, #3e474c));
-  background: linear-gradient(90deg, rgba(200, 177, 118, 0.975228) 3%, #3e474c 93%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
-  color: #f2f2f2;
-  padding: 1rem;
-  margin-bottom: 0%;
-}
-
-@media screen and (max-width: 768px) {
-  .titulo {
-    padding-left: 4rem;
-  }
-}
-
 .noticias {
   display: -ms-grid;
   display: grid;
@@ -354,7 +338,7 @@ main {
   -ms-grid-rows: 300px;
       grid-template-rows: 300px;
       grid-template-areas: "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
-  gap: 50px;
+  gap: 2rem;
   width: 100%;
   background-color: #f2f2f2;
   place-items: center;
@@ -372,7 +356,6 @@ main {
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "fotoArea1"  "fotoArea2" "fotoArea3"  "fotoArea4";
-    gap: 0.5rem;
     padding: 0.5rem;
     margin-top: 0%;
   }
@@ -385,7 +368,6 @@ main {
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4";
-    gap: 0.5rem;
     padding: 0.5rem;
     margin-top: 0%;
   }
@@ -411,7 +393,6 @@ main {
   border-radius: 50%;
   height: 150px;
   width: 150px;
-  margin-bottom: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -422,7 +403,7 @@ main {
   margin-top: 1rem;
   color: #3e474c;
   border-top: #3e474c solid;
-  border-width: 1px;
+  border-width: 0.1rem;
 }
 
 .noticias__item--ancor:hover {
@@ -471,6 +452,12 @@ main {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: fotoArea3;
+}
+
+.fotoArea4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: fotoArea4;
 }
 
 /* COLORES */
@@ -911,22 +898,6 @@ main {
   }
 }
 
-.titulo {
-  background: #c8b176;
-  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(200, 177, 118, 0.975228)), color-stop(93%, #3e474c));
-  background: linear-gradient(90deg, rgba(200, 177, 118, 0.975228) 3%, #3e474c 93%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
-  color: #f2f2f2;
-  padding: 1rem;
-  margin-bottom: 0%;
-}
-
-@media screen and (max-width: 768px) {
-  .titulo {
-    padding-left: 4rem;
-  }
-}
-
 .noticias {
   display: -ms-grid;
   display: grid;
@@ -935,7 +906,7 @@ main {
   -ms-grid-rows: 300px;
       grid-template-rows: 300px;
       grid-template-areas: "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
-  gap: 50px;
+  gap: 2rem;
   width: 100%;
   background-color: #f2f2f2;
   place-items: center;
@@ -953,7 +924,6 @@ main {
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "fotoArea1"  "fotoArea2" "fotoArea3"  "fotoArea4";
-    gap: 0.5rem;
     padding: 0.5rem;
     margin-top: 0%;
   }
@@ -966,7 +936,6 @@ main {
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4";
-    gap: 0.5rem;
     padding: 0.5rem;
     margin-top: 0%;
   }
@@ -992,7 +961,6 @@ main {
   border-radius: 50%;
   height: 150px;
   width: 150px;
-  margin-bottom: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1003,7 +971,7 @@ main {
   margin-top: 1rem;
   color: #3e474c;
   border-top: #3e474c solid;
-  border-width: 1px;
+  border-width: 0.1rem;
 }
 
 .noticias__item--ancor:hover {
@@ -1054,6 +1022,17 @@ main {
   grid-area: fotoArea3;
 }
 
+.fotoArea4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: fotoArea4;
+}
+
+.imagen {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .lista__item--activo {
   /*Para que cuando me encuentre en esa pagina este subrayado y en negrita*/
   text-decoration: underline;
@@ -1068,6 +1047,18 @@ créditos del mixin: https://codepen.io/jakob-e/pen/yVyYzv
 */
 /* Haciendo uso del mixin de arriba con @include podemos declarar los valores máximos y minimos [en ese orden] 
 en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max: */
+* {
+  /* Selector universal, aplica a toda la pagina web*/
+  font-family: "Roboto", sans-serif;
+  /* fuente para toda mi pagina */
+  margin: 0;
+  /* margen de mi pagina */
+  padding: 0;
+  /* espacio entre el contenido del elemento y su borde */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .especialidades {
   display: -ms-grid;
   display: grid;
@@ -1203,6 +1194,18 @@ créditos del mixin: https://codepen.io/jakob-e/pen/yVyYzv
 */
 /* Haciendo uso del mixin de arriba con @include podemos declarar los valores máximos y minimos [en ese orden] 
 en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max: */
+* {
+  /* Selector universal, aplica a toda la pagina web*/
+  font-family: "Roboto", sans-serif;
+  /* fuente para toda mi pagina */
+  margin: 0;
+  /* margen de mi pagina */
+  padding: 0;
+  /* espacio entre el contenido del elemento y su borde */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .testimonios {
   background-image: url("../assets/tinified/clientesFelices.jpeg");
   display: -webkit-box;
@@ -1285,6 +1288,18 @@ créditos del mixin: https://codepen.io/jakob-e/pen/yVyYzv
 */
 /* Haciendo uso del mixin de arriba con @include podemos declarar los valores máximos y minimos [en ese orden] 
 en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max: */
+* {
+  /* Selector universal, aplica a toda la pagina web*/
+  font-family: "Roboto", sans-serif;
+  /* fuente para toda mi pagina */
+  margin: 0;
+  /* margen de mi pagina */
+  padding: 0;
+  /* espacio entre el contenido del elemento y su borde */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .contacto {
   display: -webkit-box;
   display: -ms-flexbox;

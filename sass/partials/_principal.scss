@@ -120,27 +120,13 @@ main {
   }
 }
 
-.titulo {
-  background: rgb(200, 177, 118);
-  background: -moz-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
-  background: -webkit-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
-  background: linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
-  color: $blanco;
-  padding: 1rem;
-  margin-bottom: 0%;
-  @include movil {
-    padding-left: 4rem;
-  }
-}
-
 .noticias {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 300px;
   grid-template-areas:
       "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
-  gap: 50px;
+  gap: 2rem;
   width: 100%;
   background-color: $blanco;
   place-items: center;
@@ -156,7 +142,6 @@ main {
     "fotoArea2"
     "fotoArea3" 
     "fotoArea4";
-    gap: 0.5rem;
     padding: 0.5rem;
     margin-top: 0%;
 }
@@ -167,7 +152,6 @@ main {
       grid-template-areas:
       "fotoArea1 fotoArea2"
       "fotoArea3 fotoArea4";
-      gap: 0.5rem;
       padding: 0.5rem;
       margin-top: 0%;
   }
@@ -182,7 +166,6 @@ main {
           border-radius: 50%;
           height: 150px;
           width: 150px;
-          margin-bottom: 1rem;
           object-fit: cover;
       }
 
@@ -192,7 +175,7 @@ main {
           margin-top: 1rem;
           color: $gris;
           border-top: $gris solid;
-          border-width: 1px;
+          border-width: 0.1rem;
 
           &:hover {
             color: $gris;
@@ -221,5 +204,10 @@ main {
 
 .fotoArea3 {
   grid-area: fotoArea3;
+  @extend .fotoArea1;
+}
+
+.fotoArea4 {
+  grid-area: fotoArea4;
   @extend .fotoArea1;
 }
