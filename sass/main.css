@@ -33,6 +33,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 @media screen and (max-width: 768px) {
   .encabezado {
     position: relative;
+    height: 5rem;
   }
 }
 
@@ -354,7 +355,6 @@ main {
       grid-template-rows: 300px;
       grid-template-areas: "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
   gap: 50px;
-  height: auto;
   width: 100%;
   background-color: #f2f2f2;
   place-items: center;
@@ -374,7 +374,7 @@ main {
         grid-template-areas: "fotoArea1"  "fotoArea2" "fotoArea3"  "fotoArea4";
     gap: 0.5rem;
     padding: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0%;
   }
 }
 
@@ -387,7 +387,7 @@ main {
         grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4";
     gap: 0.5rem;
     padding: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0%;
   }
 }
 
@@ -714,13 +714,344 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   }
 }
 
-/*Main de seccion Nosotros*/
-.main {
+/* COLORES */
+/*SOMBRA*/
+* {
+  /* Selector universal, aplica a toda la pagina web*/
+  font-family: "Roboto", sans-serif;
+  /* fuente para toda mi pagina */
+  margin: 0;
+  /* margen de mi pagina */
+  padding: 0;
+  /* espacio entre el contenido del elemento y su borde */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+créditos del mixin: https://codepen.io/jakob-e/pen/yVyYzv
+*/
+/* Haciendo uso del mixin de arriba con @include podemos declarar los valores máximos y minimos [en ese orden] 
+en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max: */
+/* COLORES */
+/*SOMBRA*/
+* {
+  /* Selector universal, aplica a toda la pagina web*/
+  font-family: "Roboto", sans-serif;
+  /* fuente para toda mi pagina */
+  margin: 0;
+  /* margen de mi pagina */
+  padding: 0;
+  /* espacio entre el contenido del elemento y su borde */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+créditos del mixin: https://codepen.io/jakob-e/pen/yVyYzv
+*/
+/* Haciendo uso del mixin de arriba con @include podemos declarar los valores máximos y minimos [en ese orden] 
+en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max: */
+main {
+  background-color: #f2f2f2;
+  margin-top: 9.688rem;
+  /* En movil */
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    margin-top: 0;
+  }
+}
+
+.principal {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 150px 150px 150px auto;
+      grid-template-rows: 150px 150px 150px auto;
+      grid-template-areas: "foto foto foto" "foto foto foto" "foto foto foto" ". parrafo parrafo";
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .principal {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "foto" "foto" "foto" "parrafo";
+  }
+}
+
+.principal__foto {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: foto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: url(../assets/principal.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   z-index: 2;
 }
 
-.main__bg {
-  background-color: #5e6d7583;
+.principal__texto {
+  margin-top: 9rem;
+  margin-left: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
+  color: #3e474c;
+}
+
+@media screen and (width: 768px) {
+  .principal__texto {
+    margin-left: 4rem;
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .principal__texto {
+    margin-top: 6rem;
+    margin-left: 2rem;
+  }
+}
+
+.principal__texto--titulo {
+  font-size: 4.5rem;
+  font-weight: bold;
+  background-color: #f6f2f2c2;
+  border-radius: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .principal__texto--titulo {
+    font-size: 2.2rem;
+  }
+}
+
+.principal__texto--boton {
+  display: inline-block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #c8b176;
+  border-radius: 2rem;
+  padding: 0.5rem;
+  border-color: #c8b176;
+  color: #f2f2f2;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .principal__texto--boton {
+    margin-bottom: 2.5rem;
+  }
+}
+
+.principal__texto--boton:hover {
+  background-color: #3e474c;
+  color: #c8b176;
+}
+
+.principal__texto--ancor {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: #f2f2f2;
+}
+
+.principal__texto--ancor:hover {
+  color: #f2f2f2;
+}
+
+.principal__parrafo {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: parrafo;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  justify-self: center;
+  text-align: center;
+  padding: 3rem;
+  color: #3e474c;
+  /* El tamaño de la fuente cambia de un dispositivo a otro */
+}
+
+.principal__parrafo {
+  font-size: 1rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .principal__parrafo {
+    font-size: calc( 1rem +  num(1.2rem)-num(1rem) *  (100vw - 768px) /  num(1024px)-num(768px));
+  }
+}
+
+@media (min-width: 1024px) {
+  .principal__parrafo {
+    font-size: 1.2rem;
+  }
+}
+
+.titulo {
+  background: #c8b176;
+  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(200, 177, 118, 0.975228)), color-stop(93%, #3e474c));
+  background: linear-gradient(90deg, rgba(200, 177, 118, 0.975228) 3%, #3e474c 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+  color: #f2f2f2;
+  padding: 1rem;
+  margin-bottom: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  .titulo {
+    padding-left: 4rem;
+  }
+}
+
+.noticias {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 300px;
+      grid-template-rows: 300px;
+      grid-template-areas: "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
+  gap: 50px;
+  width: 100%;
+  background-color: #f2f2f2;
+  place-items: center;
+  padding: 1rem;
+  overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .noticias {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "fotoArea1"  "fotoArea2" "fotoArea3"  "fotoArea4";
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 0%;
+  }
+}
+
+@media screen and (width: 768px) {
+  .noticias {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4";
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 0%;
+  }
+}
+
+.noticias__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.noticias__item--foto {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.noticias__item--ancor {
+  text-align: center;
+  line-height: 2rem;
+  margin-top: 1rem;
+  color: #3e474c;
+  border-top: #3e474c solid;
+  border-width: 1px;
+}
+
+.noticias__item--ancor:hover {
+  color: #3e474c;
+  font-weight: bold;
+}
+
+.noticias__item--ancor {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .noticias__item--ancor {
+    font-size: calc( 1.2rem +  num(1rem)-num(1.2rem) *  (100vw - 768px) /  num(1024px)-num(768px));
+  }
+}
+
+@media (min-width: 1024px) {
+  .noticias__item--ancor {
+    font-size: 1rem;
+  }
+}
+
+.fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: fotoArea1;
+  background-color: #f6f2f2c2;
+  padding: 2rem;
+  border-width: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
+    width: auto;
+  }
+}
+
+.fotoArea2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: fotoArea2;
+}
+
+.fotoArea3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: fotoArea3;
 }
 
 .lista__item--activo {

@@ -141,7 +141,6 @@ main {
   grid-template-areas:
       "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
   gap: 50px;
-  height: auto;
   width: 100%;
   background-color: $blanco;
   place-items: center;
@@ -159,7 +158,7 @@ main {
     "fotoArea4";
     gap: 0.5rem;
     padding: 0.5rem;
-    margin-top: 1rem;
+    margin-top: 0%;
 }
 
   @include tablet {
@@ -170,7 +169,7 @@ main {
       "fotoArea3 fotoArea4";
       gap: 0.5rem;
       padding: 0.5rem;
-      margin-top: 1rem;
+      margin-top: 0%;
   }
 
   &__item {
