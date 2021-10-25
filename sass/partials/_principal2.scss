@@ -4,6 +4,16 @@
 @import "./responsive";
 @import "./principal";
 
+.main__seccion {
+    padding-top: 2rem;
+    color: $blanco;
+    background: rgb(200, 177, 118);
+    background: -moz-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+    background: -webkit-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+    background: linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+}
+
 .imagen {
     object-fit: cover;
 }

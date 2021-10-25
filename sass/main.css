@@ -1028,6 +1028,15 @@ main {
   grid-area: fotoArea4;
 }
 
+.main__seccion {
+  padding-top: 2rem;
+  color: #f2f2f2;
+  background: #c8b176;
+  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(200, 177, 118, 0.975228)), color-stop(93%, #3e474c));
+  background: linear-gradient(90deg, rgba(200, 177, 118, 0.975228) 3%, #3e474c 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+}
+
 .imagen {
   -o-object-fit: cover;
      object-fit: cover;
