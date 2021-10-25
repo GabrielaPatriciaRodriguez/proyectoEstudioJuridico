@@ -1028,6 +1028,12 @@ main {
   grid-area: fotoArea4;
 }
 
+.lista__item--activo {
+  /*Para que cuando me encuentre en esa pagina este subrayado y en negrita*/
+  text-decoration: underline;
+  font-weight: bold;
+}
+
 .main__seccion {
   padding-top: 2rem;
   color: #f2f2f2;
@@ -1042,10 +1048,8 @@ main {
      object-fit: cover;
 }
 
-.lista__item--activo {
-  /*Para que cuando me encuentre en esa pagina este subrayado y en negrita*/
-  text-decoration: underline;
-  font-weight: bold;
+.row {
+  --bs-gutter-x: 0rem;
 }
 
 /* MAIN SECCION ESPECIALIDADES*/
