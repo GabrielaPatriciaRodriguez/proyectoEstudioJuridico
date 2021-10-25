@@ -8,21 +8,20 @@
 .especialidades {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 400px 400px;
+    grid-template-rows: 400px;
     grid-template-areas:
         "fotoArea1 fotoArea2 fotoArea3"
         "fotoArea4 fotoArea5 fotoArea6";
-    gap: 50px;
+    gap: 5px;
     height: auto;
     width: 100%;
     background-color: $blanco;
     place-items: center;
-    padding: 150px;
-    margin-top: 40px;
+    padding: 50px;
     overflow: hidden;
 
 
-    @include tablet {
+    @include movil {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
         grid-template-areas:
@@ -34,7 +33,17 @@
         "fotoArea6";
         gap: 1rem;
         padding: 0.5rem;
-        margin-top: 20%;
+    }
+
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+        "fotoArea1 fotoArea2"
+        "fotoArea3 fotoArea4"
+        "fotoArea5 fotoArea6";
+        gap: 1rem;
+        padding: 0.5rem;
     }
 
 

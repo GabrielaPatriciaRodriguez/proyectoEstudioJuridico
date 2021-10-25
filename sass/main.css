@@ -1077,20 +1077,19 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 400px 400px;
-      grid-template-rows: 400px 400px;
+  -ms-grid-rows: 400px;
+      grid-template-rows: 400px;
       grid-template-areas: "fotoArea1 fotoArea2 fotoArea3" "fotoArea4 fotoArea5 fotoArea6";
-  gap: 50px;
+  gap: 5px;
   height: auto;
   width: 100%;
   background-color: #f2f2f2;
   place-items: center;
-  padding: 150px;
-  margin-top: 40px;
+  padding: 50px;
   overflow: hidden;
 }
 
-@media screen and (width: 768px) {
+@media screen and (max-width: 768px) {
   .especialidades {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1099,7 +1098,18 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
         grid-template-areas: "fotoArea1" "fotoArea2" "fotoArea3" "fotoArea4" "fotoArea5" "fotoArea6";
     gap: 1rem;
     padding: 0.5rem;
-    margin-top: 20%;
+  }
+}
+
+@media screen and (width: 768px) {
+  .especialidades {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4" "fotoArea5 fotoArea6";
+    gap: 1rem;
+    padding: 0.5rem;
   }
 }
 
