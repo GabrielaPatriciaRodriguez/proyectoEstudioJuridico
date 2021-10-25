@@ -30,7 +30,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* por la animacion */
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .encabezado {
     position: relative;
   }
@@ -68,7 +68,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   margin: auto 1vh auto 1vh;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .encabezado__contactanos {
     display: none;
   }
@@ -124,7 +124,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* Para que en movil se muestren en columna */
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .lista {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -176,7 +176,7 @@ main {
   /* En movil */
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   main {
     margin-top: 0;
   }
@@ -193,7 +193,7 @@ main {
   overflow: hidden;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .principal {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -235,17 +235,17 @@ main {
   color: #3e474c;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
   .principal__texto {
-    margin-left: 3rem;
+    margin-left: 4rem;
     margin-top: 10rem;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .principal__texto {
-    margin-top: 5rem;
-    margin-left: 1rem;
+    margin-top: 6rem;
+    margin-left: 2rem;
   }
 }
 
@@ -256,7 +256,7 @@ main {
   border-radius: 2rem;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .principal__texto--titulo {
     font-size: 2.2rem;
   }
@@ -275,6 +275,12 @@ main {
   border-color: #c8b176;
   color: #f2f2f2;
   font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .principal__texto--boton {
+    margin-bottom: 2.5rem;
+  }
 }
 
 .principal__texto--boton:hover {
@@ -323,22 +329,40 @@ main {
   }
 }
 
+.titulo {
+  background: #c8b176;
+  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(200, 177, 118, 0.975228)), color-stop(93%, #3e474c));
+  background: linear-gradient(90deg, rgba(200, 177, 118, 0.975228) 3%, #3e474c 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+  color: #f2f2f2;
+  padding: 1rem;
+  margin-bottom: 0%;
+}
+
+@media screen and (max-width: 768px) {
+  .titulo {
+    padding-left: 4rem;
+  }
+}
+
 .noticias {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 400px;
-      grid-template-rows: 400px;
-      grid-template-areas: "fotoArea1 fotoArea2 fotoArea3";
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 300px;
+      grid-template-rows: 300px;
+      grid-template-areas: "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
   gap: 50px;
   height: auto;
   width: 100%;
   background-color: #f2f2f2;
   place-items: center;
-  padding: 50px;
-  margin-top: 5px;
+  padding: 1rem;
   overflow: hidden;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -347,10 +371,23 @@ main {
         grid-template-columns: 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: "fotoArea1" "fotoArea2" "fotoArea3";
-    gap: 1rem;
+        grid-template-areas: "fotoArea1"  "fotoArea2" "fotoArea3"  "fotoArea4";
+    gap: 0.5rem;
     padding: 0.5rem;
-    margin-top: 20%;
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (width: 768px) {
+  .noticias {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4";
+    gap: 0.5rem;
+    padding: 0.5rem;
+    margin-top: 1rem;
   }
 }
 
@@ -372,9 +409,11 @@ main {
 
 .noticias__item--foto {
   border-radius: 50%;
-  height: 250px;
-  width: 250px;
-  margin-bottom: 2rem;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .noticias__item--ancor {
@@ -384,6 +423,11 @@ main {
   color: #3e474c;
   border-top: #3e474c solid;
   border-width: 1px;
+}
+
+.noticias__item--ancor:hover {
+  color: #3e474c;
+  font-weight: bold;
 }
 
 .noticias__item--ancor {
@@ -407,12 +451,11 @@ main {
   -ms-grid-column: 1;
   grid-area: fotoArea1;
   background-color: #f6f2f2c2;
-  padding-top: 35px;
-  width: 20rem;
-  border-width: 1px;
+  padding: 2rem;
+  border-width: 1rem;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
     width: auto;
   }
@@ -458,7 +501,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* Para que en movil se vean los iconos de redes sociales en fila y centrados */
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .pie {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -487,7 +530,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* En movil no se vera el logo ni paginas de interes */
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .pie__logo {
     display: none;
   }
@@ -525,13 +568,13 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
   .pie__pag--tit {
     padding-bottom: 0.5rem;
   }
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .pie__pag {
     display: none;
   }
@@ -542,7 +585,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* sin viñetas */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
   .pie__lista {
     font-size: small;
   }
@@ -569,14 +612,14 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   text-align: center;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .pie__dir {
     padding-top: 1.5rem;
     line-height: 1rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
   .pie__dir {
     font-size: small;
     line-height: 1rem;
@@ -595,7 +638,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   border-radius: 50%;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
   .pie__iconos, .encabezado__iconos {
     size: 1rem;
     margin: 1rem;
@@ -610,7 +653,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   color: #c8b176;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .pie .redes {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -712,26 +755,13 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
   .especialidades {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "fotoArea1" "fotoArea2" "fotoArea3" "fotoArea4" "fotoArea5" "fotoArea6";
-    gap: 1rem;
-    padding: 0.5rem;
-    margin-top: 20%;
-  }
-}
-
-@media screen and (width: 768px) {
-  .especialidades {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-        grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4" "fotoArea5 fotoArea6";
     gap: 1rem;
     padding: 0.5rem;
     margin-top: 20%;
@@ -798,7 +828,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   border-width: 1px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
     width: auto;
   }
@@ -858,7 +888,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
      object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
   .testimonios {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -884,22 +914,14 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
           box-shadow: 10px 10px 5px #eceaea3a;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
   .testimonios__secciones {
     width: 15rem;
     font-size: 0.9rem;
   }
 }
 
-@media screen and (width: 768px) {
-  .testimonios__secciones {
-    margin: 5rem;
-    width: 37rem;
-    border-radius: 5px;
-  }
-}
-
-.testimonios__datos {
+.testimonios__secciones__datos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -912,13 +934,13 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   margin-top: 2rem;
 }
 
-.testimonios__datos--foto {
+.testimonios__secciones__datos--foto {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.testimonios__datos--cliente {
+.testimonios__secciones__datos--cliente {
   font-size: 0.8rem;
   margin-left: 1rem;
   font-weight: normal;
@@ -948,16 +970,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   overflow: hidden;
 }
 
-@media screen and (max-width: 425px) {
-  .contacto {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-left: 0px;
-  }
-}
-
-@media screen and (width: 768px) {
+@media screen and (max-width: 768px) {
   .contacto {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -971,7 +984,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   padding: 200px 50px 150px 50px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .formulario {
     padding: 0px;
   }
@@ -992,7 +1005,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   margin: 1rem;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .formulario__parrafo {
     font-size: 0.8rem;
   }
@@ -1002,7 +1015,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   margin: 20px;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .formulario__divisiones {
     margin: 10px;
   }
@@ -1012,7 +1025,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   padding: 0.5rem 7rem 0.5rem 0;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .formulario__divisiones--input {
     padding-right: 6rem;
   }
@@ -1075,22 +1088,13 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   overflow: hidden;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
   .error {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     padding-left: 0px;
     margin-top: auto;
-  }
-}
-
-@media screen and (width: 768px) {
-  .error {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    padding-left: 0px;
   }
 }
 /*# sourceMappingURL=main.css.map */

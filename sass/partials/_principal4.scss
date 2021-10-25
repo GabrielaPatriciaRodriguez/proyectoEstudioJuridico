@@ -5,7 +5,7 @@
 @import "./responsive";
 
 
-.testimonios {
+.testimonios {  
   background-image: url("../assets/tinified/clientesFelices.jpeg");
   display: flex;
   justify-content: space-around;
@@ -38,13 +38,6 @@
       font-size: 0.9rem;
     }
 
-    @include tablet2 {
-      margin: 5rem;
-      width: 37rem;
-      border-radius: 5px;
-    }
-  }
-
   &__datos {
     display: flex;
     justify-content: flex-end;
@@ -62,4 +55,5 @@
       font-weight: normal;
     }
   }
+}
 }

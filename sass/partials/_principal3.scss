@@ -36,18 +36,6 @@
         margin-top: 20%;
     }
 
-    @include tablet2 {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-        "fotoArea1 fotoArea2"
-        "fotoArea3 fotoArea4"
-        "fotoArea5 fotoArea6";
-        gap: 1rem;
-        padding: 0.5rem;
-        margin-top: 20%;
-    }
-
 
     &__item {
         display: flex;
