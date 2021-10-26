@@ -51,7 +51,7 @@ main {
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-content:flex-end;
+    align-content: flex-end;
     color: $gris;
 
     @include tablet {
@@ -63,7 +63,7 @@ main {
       margin-top: 6rem;
       margin-left: 2rem;
     }
-    
+
     &--titulo {
       font-size: 4.5rem;
       font-weight: bold;
@@ -125,7 +125,7 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 300px;
   grid-template-areas:
-      "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
+    "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
   gap: 2rem;
   width: 100%;
   background-color: $blanco;
@@ -138,52 +138,52 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-    "fotoArea1" 
-    "fotoArea2"
-    "fotoArea3" 
-    "fotoArea4";
+      "fotoArea1"
+      "fotoArea2"
+      "fotoArea3"
+      "fotoArea4";
     padding: 0.5rem;
     margin-top: 0%;
-}
+  }
 
   @include tablet {
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto;
-      grid-template-areas:
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
       "fotoArea1 fotoArea2"
       "fotoArea3 fotoArea4";
-      padding: 0.5rem;
-      margin-top: 0%;
+    padding: 0.5rem;
+    margin-top: 0%;
   }
 
   &__item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-      &--foto {
-          border-radius: 50%;
-          height: 150px;
-          width: 150px;
-          object-fit: cover;
+    &--foto {
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+      object-fit: cover;
+    }
+
+    &--ancor {
+      text-align: center;
+      line-height: 2rem;
+      margin-top: 1rem;
+      color: $gris;
+      border-top: $gris solid;
+      border-width: 0.1rem;
+
+      &:hover {
+        color: $gris;
+        font-weight: bold;
       }
 
-      &--ancor {
-          text-align: center;
-          line-height: 2rem;
-          margin-top: 1rem;
-          color: $gris;
-          border-top: $gris solid;
-          border-width: 0.1rem;
-
-          &:hover {
-            color: $gris;
-            font-weight: bold;
-          }
-
-          @include font-size(1.2rem, 1rem)
-      }
+      @include font-size(1.2rem, 1rem)
+    }
   }
 }
 
@@ -192,8 +192,9 @@ main {
   background-color: $blancoTransparente;
   padding: 2rem;
   border-width: 1rem;
+
   @include movil {
-      width: auto;
+    width: auto;
   }
 }
 
