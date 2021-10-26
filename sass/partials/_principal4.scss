@@ -16,16 +16,25 @@
   background-size: cover;
   overflow: hidden;
   object-fit: cover;
+ 
+
+  @include movil {
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
 
   @include tablet {
     justify-content: center;
     flex-direction: column;
-    padding: 0%;
+    width: 100%;
+    padding: 1rem;
   }
 
   &__secciones {
-    margin: 3rem;
-    width: 20rem;
+    width: 100%;
+    align-self: center;
     background-color: $blancoTransparente;
     border-radius: 10%;
     padding: 2rem;
@@ -33,28 +42,37 @@
     font-size: 1rem;
     color: $negro;
     box-shadow: $boxshadowTestimonios;
+    overflow: hidden;
+    margin: 1rem;
 
-    @include tablet {
-      width: 15rem;
+    @include movil {
+      width: 100%;
       font-size: 0.9rem;
     }
 
-  &__datos {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    margin-top: 2rem;
-
-    &--foto {
-      border-radius: 50%;
-      object-fit: cover;
+    @include tablet {
+      width: 40rem;
+      font-size: 0.9rem;
+      border-radius: 1rem;
+      padding: 1rem;
+      margin-right: 1rem;
     }
+}
+&__datos {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 2rem;
 
-    &--cliente {
-      font-size: 0.8rem;
-      margin-left: 1rem;
-      font-weight: normal;
-    }
+  &--foto {
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &--cliente {
+    font-size: 0.8rem;
+    margin-left: 1rem;
+    font-weight: normal;
   }
 }
 }

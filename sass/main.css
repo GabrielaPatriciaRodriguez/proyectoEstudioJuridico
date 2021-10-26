@@ -1245,6 +1245,20 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
      object-fit: cover;
 }
 
+@media screen and (max-width: 768px) {
+  .testimonios {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
 @media screen and (width: 768px) {
   .testimonios {
     -webkit-box-pack: center;
@@ -1254,13 +1268,16 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    padding: 0%;
+    width: 100%;
+    padding: 1rem;
   }
 }
 
 .testimonios__secciones {
-  margin: 3rem;
-  width: 20rem;
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   background-color: #f6f2f2c2;
   border-radius: 10%;
   padding: 2rem;
@@ -1269,16 +1286,28 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   color: #17191a;
   -webkit-box-shadow: 10px 10px 5px #eceaea3a;
           box-shadow: 10px 10px 5px #eceaea3a;
+  overflow: hidden;
+  margin: 1rem;
 }
 
-@media screen and (width: 768px) {
+@media screen and (max-width: 768px) {
   .testimonios__secciones {
-    width: 15rem;
+    width: 100%;
     font-size: 0.9rem;
   }
 }
 
-.testimonios__secciones__datos {
+@media screen and (width: 768px) {
+  .testimonios__secciones {
+    width: 40rem;
+    font-size: 0.9rem;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-right: 1rem;
+  }
+}
+
+.testimonios__datos {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1291,13 +1320,13 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   margin-top: 2rem;
 }
 
-.testimonios__secciones__datos--foto {
+.testimonios__datos--foto {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 
-.testimonios__secciones__datos--cliente {
+.testimonios__datos--cliente {
   font-size: 0.8rem;
   margin-left: 1rem;
   font-weight: normal;
