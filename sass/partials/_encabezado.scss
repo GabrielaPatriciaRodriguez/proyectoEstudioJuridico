@@ -95,13 +95,19 @@
     color: $blanco;
     font-weight: normal;
     font-size: 1.2rem;
-    text-decoration-line: none;
+    text-decoration: none;
     transition: all 1s;
 
     /* transicion de 1segundo */
+
+    &--act {
+      color: $dorado;
+      text-decoration-line: none;
+    }
+
     &:hover {
       /*Cuando pase el mouse por el ancor de las listas el menu nav resalte la palabra en 
-     dorado y agrande la letra*/
+     dorado y cambie el tamaño de la letra*/
       color: $dorado;
       font-size: 1.1rem;
     }

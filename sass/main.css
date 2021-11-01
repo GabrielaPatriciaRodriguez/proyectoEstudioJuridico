@@ -138,16 +138,21 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   color: #f2f2f2;
   font-weight: normal;
   font-size: 1.2rem;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
+  text-decoration: none;
   -webkit-transition: all 1s;
   transition: all 1s;
   /* transicion de 1segundo */
 }
 
+.lista__item--act {
+  color: #c8b176;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+}
+
 .lista__item:hover {
   /*Cuando pase el mouse por el ancor de las listas el menu nav resalte la palabra en 
-     dorado y agrande la letra*/
+     dorado y cambie el tamaño de la letra*/
   color: #c8b176;
   font-size: 1.1rem;
 }
@@ -355,7 +360,7 @@ main {
         grid-template-columns: 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: "fotoArea1"  "fotoArea2" "fotoArea3"  "fotoArea4";
+        grid-template-areas: "fotoArea1" "fotoArea2" "fotoArea3" "fotoArea4";
     padding: 0.5rem;
     margin-top: 0%;
   }
@@ -923,7 +928,7 @@ main {
         grid-template-columns: 1fr;
     -ms-grid-rows: auto;
         grid-template-rows: auto;
-        grid-template-areas: "fotoArea1"  "fotoArea2" "fotoArea3"  "fotoArea4";
+        grid-template-areas: "fotoArea1" "fotoArea2" "fotoArea3" "fotoArea4";
     padding: 0.5rem;
     margin-top: 0%;
   }
