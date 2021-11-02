@@ -3,6 +3,7 @@
 @import "./fuente";
 @import "./responsive";
 @import "./principal";
+@import "./principal3";
 
 
 .main__seccion {
@@ -24,6 +25,13 @@
 // .row {
 //     --bs-gutter-x: 0rem;
 // }
+
+
+.foto {
+    &:hover {
+        box-shadow: $boxshadowNosotros;
+    }
+}
 
 .redes {
     list-style: none;

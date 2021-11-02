@@ -1033,45 +1033,6 @@ main {
   grid-area: fotoArea4;
 }
 
-.main__seccion {
-  padding-top: 2rem;
-  color: #f2f2f2;
-  background: #c8b176;
-  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(200, 177, 118, 0.975228)), color-stop(93%, #3e474c));
-  background: linear-gradient(90deg, rgba(200, 177, 118, 0.975228) 3%, #3e474c 93%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
-}
-
-.redes {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.iconos {
-  size: 3rem;
-  text-decoration: none;
-  padding-right: 2rem;
-  margin: 0px;
-  border-radius: 50%;
-}
-
-.iconos__color {
-  color: #3e474c;
-}
-
-.iconos__color:hover {
-  color: #c8b176;
-}
-
 /* MAIN SECCION ESPECIALIDADES*/
 /* COLORES */
 /*SOMBRA*/
@@ -1097,15 +1058,15 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 400px;
-      grid-template-rows: 400px;
+  -ms-grid-rows: 500px;
+      grid-template-rows: 500px;
       grid-template-areas: "fotoArea1 fotoArea2 fotoArea3" "fotoArea4 fotoArea5 fotoArea6";
-  gap: 5px;
+  gap: 1rem;
   height: auto;
   width: 100%;
   background-color: #f2f2f2;
   place-items: center;
-  padding: 50px;
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -1188,7 +1149,208 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   -ms-grid-column: 1;
   grid-area: fotoArea1;
   background-color: #f6f2f2c2;
-  padding-top: 35px;
+  padding-top: 25px;
+  width: 20rem;
+  border-width: 1px;
+}
+
+@media screen and (max-width: 768px) {
+  .fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
+    width: auto;
+  }
+}
+
+.fotoArea2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: fotoArea2;
+}
+
+.fotoArea3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: fotoArea3;
+}
+
+.fotoArea4 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: fotoArea4;
+}
+
+.fotoArea5 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: fotoArea5;
+}
+
+.fotoArea6 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: fotoArea6;
+}
+
+.main__seccion {
+  padding-top: 2rem;
+  color: #f2f2f2;
+  background: #c8b176;
+  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(200, 177, 118, 0.975228)), color-stop(93%, #3e474c));
+  background: linear-gradient(90deg, rgba(200, 177, 118, 0.975228) 3%, #3e474c 93%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+}
+
+.foto:hover {
+  -webkit-box-shadow: 10px 10px 5px #2f2d2d3f;
+          box-shadow: 10px 10px 5px #2f2d2d3f;
+}
+
+.redes {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.iconos {
+  size: 3rem;
+  text-decoration: none;
+  padding-right: 2rem;
+  margin: 0px;
+  border-radius: 50%;
+}
+
+.iconos__color {
+  color: #3e474c;
+}
+
+.iconos__color:hover {
+  color: #c8b176;
+}
+
+/* MAIN SECCION ESPECIALIDADES*/
+/* COLORES */
+/*SOMBRA*/
+/*
+créditos del mixin: https://codepen.io/jakob-e/pen/yVyYzv
+*/
+/* Haciendo uso del mixin de arriba con @include podemos declarar los valores máximos y minimos [en ese orden] 
+en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max: */
+* {
+  /* Selector universal, aplica a toda la pagina web*/
+  font-family: "Roboto", sans-serif;
+  /* fuente para toda mi pagina */
+  margin: 0;
+  /* margen de mi pagina */
+  padding: 0;
+  /* espacio entre el contenido del elemento y su borde */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.especialidades {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: 500px;
+      grid-template-rows: 500px;
+      grid-template-areas: "fotoArea1 fotoArea2 fotoArea3" "fotoArea4 fotoArea5 fotoArea6";
+  gap: 1rem;
+  height: auto;
+  width: 100%;
+  background-color: #f2f2f2;
+  place-items: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .especialidades {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "fotoArea1" "fotoArea2" "fotoArea3" "fotoArea4" "fotoArea5" "fotoArea6";
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+@media screen and (width: 768px) {
+  .especialidades {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4" "fotoArea5 fotoArea6";
+    gap: 1rem;
+    padding: 0.5rem;
+  }
+}
+
+.especialidades__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.especialidades__item--foto {
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 2rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.especialidades__item--parrafo {
+  text-align: center;
+  line-height: 2rem;
+  margin-top: 1rem;
+  color: #3e474c;
+  border-top: #3e474c solid;
+  border-width: 1px;
+}
+
+.especialidades__item--parrafo {
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .especialidades__item--parrafo {
+    font-size: calc( 1.2rem +  num(1rem)-num(1.2rem) *  (100vw - 768px) /  num(1024px)-num(768px));
+  }
+}
+
+@media (min-width: 1024px) {
+  .especialidades__item--parrafo {
+    font-size: 1rem;
+  }
+}
+
+.fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: fotoArea1;
+  background-color: #f6f2f2c2;
+  padding-top: 25px;
   width: 20rem;
   border-width: 1px;
 }
