@@ -4,11 +4,6 @@
 @import "./responsive";
 @import "./principal";
 
-.lista__item--activo {
-    /*Para que cuando me encuentre en esa pagina este subrayado y en negrita*/
-    text-decoration: underline;
-    font-weight: bold;
-}
 
 .main__seccion {
     padding-top: 2rem;
@@ -20,10 +15,35 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
 }
 
-.imagen {
-    object-fit: cover;
+
+// .imagen {
+//     object-fit: cover;
+// }
+
+
+// .row {
+//     --bs-gutter-x: 0rem;
+// }
+
+.redes {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.row {
-    --bs-gutter-x: 0rem;
+.iconos {
+    size: 3rem;
+    text-decoration: none;
+    padding-right: 2rem;
+    margin: 0px;
+    border-radius: 50%;
+    
+    &__color {
+        color: $gris;
+
+        &:hover {
+            color: $dorado;
+          }
+    }
 }
