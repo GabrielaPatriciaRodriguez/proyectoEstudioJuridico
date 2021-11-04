@@ -38,7 +38,7 @@ main {
   &__foto {
     grid-area: foto;
     display: flex;
-    background-image: url(../assets/principal.jpeg);
+    background-image:linear-gradient(rgba(12, 12, 12, 0.6) rgba(12, 12, 12, 0.6)), url(../assets/principal.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -52,7 +52,7 @@ main {
     flex-direction: column;
     text-align: center;
     align-content: flex-end;
-    color: $gris;
+    color: $blanco;
 
     @include tablet {
       margin-left: 4rem;
@@ -67,8 +67,8 @@ main {
     &--titulo {
       font-size: 4.5rem;
       font-weight: bold;
-      background-color: $blancoTransparente;
-      border-radius: 2rem;
+      // background-color: $blancoTransparente;
+      // border-radius: 2rem;
 
       @include movil {
         font-size: 2.2rem;
