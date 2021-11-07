@@ -67,8 +67,6 @@ main {
     &--titulo {
       font-size: 4.5rem;
       font-weight: bold;
-      // background-color: $blancoTransparente;
-      // border-radius: 2rem;
 
       @include movil {
         font-size: 2.2rem;
@@ -118,21 +116,33 @@ main {
     /* El tamaño de la fuente cambia de un dispositivo a otro */
     @include font-size(1rem, 1.2rem);
   }
+
+  &__linea {
+    width: 70%;
+    display: flex;
+    margin-left: 15%;
+  }
+
+  &__seccion {
+    padding-top: 2rem;
+    color: $gris;
+  }
 }
 
 .noticias {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 300px;
+  grid-template-rows: 500px;
   grid-template-areas:
     "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
-  gap: 2rem;
+  gap: 1rem;
   width: 100%;
   background-color: $blanco;
   place-items: center;
   padding: 1rem;
   overflow: hidden;
   justify-content: center;
+  
 
   @include movil {
     grid-template-columns: 1fr;
@@ -162,6 +172,10 @@ main {
     justify-content: center;
     align-items: center;
 
+    &:hover {
+      box-shadow: $boxshadowNosotros;
+  }
+
     &--foto {
       border-radius: 50%;
       height: 150px;
@@ -169,17 +183,25 @@ main {
       object-fit: cover;
     }
 
-    &--ancor {
+    &--titulo {
       text-align: center;
       line-height: 2rem;
       margin-top: 1rem;
       color: $gris;
-      border-top: $gris solid;
+      font-weight:bold;
+      border-bottom: $gris solid;
       border-width: 0.1rem;
 
+      @include font-size(1.2rem, 1rem)
+    }
+
+    &--ancor {
+      line-height: 2rem;
+      margin-top: 1rem;
+      color: $gris;
+
       &:hover {
-        color: $gris;
-        font-weight: bold;
+        color: $dorado;
       }
 
       @include font-size(1.2rem, 1rem)
@@ -211,4 +233,10 @@ main {
 .fotoArea4 {
   grid-area: fotoArea4;
   @extend .fotoArea1;
+}
+
+
+// carrusel noticias
+.seccion__bg {
+  background-color: $grisTransparente;
 }
