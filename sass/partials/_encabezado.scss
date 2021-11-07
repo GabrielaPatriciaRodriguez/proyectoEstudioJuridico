@@ -94,11 +94,10 @@
   &__item {
     color: $blanco;
     font-weight: normal;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-decoration: none;
-    transition: all 1s;
-
     /* transicion de 1segundo */
+    transition: all 1s;
 
     &--act {
       color: $dorado;

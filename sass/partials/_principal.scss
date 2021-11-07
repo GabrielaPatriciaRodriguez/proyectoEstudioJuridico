@@ -7,12 +7,13 @@ main {
   background-color: $blanco;
   margin-top: 9.688rem;
 
-  /* En movil */
+  // En movil
   @include movil {
     margin-top: 0;
   }
 }
 
+// Imagen de portada, titulo y Boton de consulta gratis. Ocupando Grid.
 
 .principal {
   display: grid;
@@ -35,6 +36,7 @@ main {
       "parrafo";
   }
 
+  // Foto de portada con fondo para que se note el titulo en blanco.
   &__foto {
     grid-area: foto;
     display: flex;
@@ -42,7 +44,7 @@ main {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 2;
+    object-fit: cover;
   }
 
   &__texto {
@@ -233,10 +235,4 @@ main {
 .fotoArea4 {
   grid-area: fotoArea4;
   @extend .fotoArea1;
-}
-
-
-// carrusel noticias
-.seccion__bg {
-  background-color: $grisTransparente;
 }
