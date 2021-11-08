@@ -18,7 +18,7 @@ main {
 .principal {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 150px 150px 150px auto;
+  grid-template-rows: 200px 200px 150px auto;
   grid-template-areas:
     "foto foto foto"
     "foto foto foto"
@@ -36,42 +36,59 @@ main {
       "parrafo";
   }
 
-  // Foto de portada con fondo para que se note el titulo en blanco.
+  // Foto de portada con titulo en blanco.
   &__foto {
     grid-area: foto;
     display: flex;
-    background-image:linear-gradient(rgba(12, 12, 12, 0.6) rgba(12, 12, 12, 0.6)), url(../assets/principal.jpeg);
+    // background-image: url(../assets/tinified/principal2.jpg);
+    // background-image: url(../assets/tinified/principal3.jpg);
+    background-image: url(../assets/tinified/principal.jpg);
+    // background-image: url(../assets/tinified/formulario.jpeg);
+    // background-image:linear-gradient(rgba(12, 12, 12, 0.6) rgba(12, 12, 12, 0.6)), url(../assets/principal.jpeg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    object-fit: cover;
+    object-fit:scale-down;
   }
 
   &__texto {
     margin-top: 9rem;
-    margin-left: 8rem;
+    margin-left: 9rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     align-content: flex-end;
     color: $blanco;
 
-    @include tablet {
-      margin-left: 4rem;
+    @include laptop {
+      margin-left: 5rem;
       margin-top: 10rem;
     }
 
+    @include tablet {
+      margin-left: 4rem;
+      margin-top: 12rem;
+    }
+
     @include movil {
-      margin-top: 6rem;
-      margin-left: 2rem;
+      margin-top: 3.5rem;
+      margin-left: 1.5rem;
     }
 
     &--titulo {
-      font-size: 4.5rem;
+      font-size: 5rem;
       font-weight: bold;
 
+      @include laptop {
+        font-size: 3.5rem;
+      }
+
+      @include tablet {
+        font-size: 2.9rem;
+      }
+
       @include movil {
-        font-size: 2.2rem;
+        font-size: 1.7rem;
       }
     }
 
@@ -88,6 +105,7 @@ main {
 
       @include movil {
         margin-bottom: 2.5rem;
+        font-size: 1rem;
       }
 
       &:hover {

@@ -30,7 +30,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* por la animacion */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .encabezado {
     position: relative;
     height: 5rem;
@@ -69,7 +69,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   margin: auto 1vh auto 1vh;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .encabezado__contactanos {
     display: none;
   }
@@ -125,7 +125,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* Para que en movil se muestren en columna */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .lista {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -181,7 +181,7 @@ main {
   margin-top: 9.688rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   main {
     margin-top: 0;
   }
@@ -192,13 +192,13 @@ main {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 150px 150px 150px auto;
-      grid-template-rows: 150px 150px 150px auto;
+  -ms-grid-rows: 200px 200px 150px auto;
+      grid-template-rows: 200px 200px 150px auto;
       grid-template-areas: "foto foto foto" "foto foto foto" "foto foto foto" ". parrafo parrafo";
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .principal {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -217,18 +217,17 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 12, 12, 0.6))), url(../assets/principal.jpeg);
-  background-image: linear-gradient(rgba(12, 12, 12, 0.6) rgba(12, 12, 12, 0.6)), url(../assets/principal.jpeg);
+  background-image: url(../assets/tinified/principal.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .principal__texto {
   margin-top: 9rem;
-  margin-left: 8rem;
+  margin-left: 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -242,28 +241,47 @@ main {
   color: #f2f2f2;
 }
 
-@media screen and (width: 768px) {
+@media screen and (width: 1024px) {
   .principal__texto {
-    margin-left: 4rem;
+    margin-left: 5rem;
     margin-top: 10rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
   .principal__texto {
-    margin-top: 6rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
+    margin-top: 12rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .principal__texto {
+    margin-top: 3.5rem;
+    margin-left: 1.5rem;
   }
 }
 
 .principal__texto--titulo {
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 1024px) {
   .principal__texto--titulo {
-    font-size: 2.2rem;
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (width: 768px) {
+  .principal__texto--titulo {
+    font-size: 2.9rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .principal__texto--titulo {
+    font-size: 1.7rem;
   }
 }
 
@@ -282,9 +300,10 @@ main {
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .principal__texto--boton {
     margin-bottom: 2.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -366,7 +385,7 @@ main {
           justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .noticias {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -480,7 +499,7 @@ main {
   border-width: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
     width: auto;
   }
@@ -532,7 +551,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* Para que en movil se vean los iconos de redes sociales en fila y centrados */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .pie {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -561,7 +580,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* En movil no se vera el logo ni paginas de interes */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .pie__logo {
     display: none;
   }
@@ -605,7 +624,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .pie__pag {
     display: none;
   }
@@ -643,7 +662,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   text-align: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .pie__dir {
     padding-top: 1.5rem;
     line-height: 1rem;
@@ -684,7 +703,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   color: #c8b176;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .pie .redes {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -788,7 +807,7 @@ main {
   margin-top: 9.688rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   main {
     margin-top: 0;
   }
@@ -799,13 +818,13 @@ main {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 150px 150px 150px auto;
-      grid-template-rows: 150px 150px 150px auto;
+  -ms-grid-rows: 200px 200px 150px auto;
+      grid-template-rows: 200px 200px 150px auto;
       grid-template-areas: "foto foto foto" "foto foto foto" "foto foto foto" ". parrafo parrafo";
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .principal {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -824,18 +843,17 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(12, 12, 12, 0.6))), url(../assets/principal.jpeg);
-  background-image: linear-gradient(rgba(12, 12, 12, 0.6) rgba(12, 12, 12, 0.6)), url(../assets/principal.jpeg);
+  background-image: url(../assets/tinified/principal.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
 }
 
 .principal__texto {
   margin-top: 9rem;
-  margin-left: 8rem;
+  margin-left: 9rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -849,28 +867,47 @@ main {
   color: #f2f2f2;
 }
 
-@media screen and (width: 768px) {
+@media screen and (width: 1024px) {
   .principal__texto {
-    margin-left: 4rem;
+    margin-left: 5rem;
     margin-top: 10rem;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 768px) {
   .principal__texto {
-    margin-top: 6rem;
-    margin-left: 2rem;
+    margin-left: 4rem;
+    margin-top: 12rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .principal__texto {
+    margin-top: 3.5rem;
+    margin-left: 1.5rem;
   }
 }
 
 .principal__texto--titulo {
-  font-size: 4.5rem;
+  font-size: 5rem;
   font-weight: bold;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (width: 1024px) {
   .principal__texto--titulo {
-    font-size: 2.2rem;
+    font-size: 3.5rem;
+  }
+}
+
+@media screen and (width: 768px) {
+  .principal__texto--titulo {
+    font-size: 2.9rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .principal__texto--titulo {
+    font-size: 1.7rem;
   }
 }
 
@@ -889,9 +926,10 @@ main {
   font-size: 1.2rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .principal__texto--boton {
     margin-bottom: 2.5rem;
+    font-size: 1rem;
   }
 }
 
@@ -973,7 +1011,7 @@ main {
           justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .noticias {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1087,7 +1125,7 @@ main {
   border-width: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
     width: auto;
   }
@@ -1148,7 +1186,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .especialidades {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1232,7 +1270,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   border-width: 1px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
     width: auto;
   }
@@ -1294,7 +1332,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .nosotros {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1378,7 +1416,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   border-width: 1px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
     width: auto;
   }
@@ -1486,7 +1524,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .especialidades {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
@@ -1570,7 +1608,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   border-width: 1px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .fotoArea1, .fotoArea2, .fotoArea3, .fotoArea4, .fotoArea5, .fotoArea6 {
     width: auto;
   }
@@ -1642,7 +1680,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
      object-fit: cover;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .testimonios {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1687,7 +1725,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   margin: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .testimonios__secciones {
     width: 100%;
     font-size: 0.9rem;
@@ -1765,7 +1803,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .contacto {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
@@ -1779,7 +1817,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   padding: 200px 50px 150px 50px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .formulario {
     padding: 0px;
   }
@@ -1800,7 +1838,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   margin: 1rem;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .formulario__parrafo {
     font-size: 0.8rem;
   }
@@ -1810,7 +1848,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   margin: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .formulario__divisiones {
     margin: 10px;
   }
@@ -1820,7 +1858,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   padding: 0.5rem 7rem 0.5rem 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .formulario__divisiones--input {
     padding-right: 6rem;
   }
@@ -1883,7 +1921,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   overflow: hidden;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 425px) {
   .error {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
