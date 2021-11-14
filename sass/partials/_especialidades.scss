@@ -3,7 +3,6 @@
 @import "./fuente";
 @import "./responsive";
 
-
 .especialidades {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -18,7 +17,6 @@
     place-items: center;
     padding: 20px;
     overflow: hidden;
-
 
     @include tablet {
         grid-template-columns: 1fr 1fr;
@@ -43,7 +41,6 @@
         gap: 1rem;
         padding: 0.5rem;
     }
-
 
     &__item {
         height: 100%;
