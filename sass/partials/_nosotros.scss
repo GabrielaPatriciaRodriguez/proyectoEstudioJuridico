@@ -1,11 +1,8 @@
+//Formato de Main Seccion Nosotros
+
 @import "./variables";
-@import "./reset";
 @import "./fuente";
 @import "./responsive";
-@import "./principal";
-@import "./especialidades";
-@import "./reset";
-
 
 
 .main__titulo {
@@ -15,10 +12,10 @@
     padding: 1rem;
     color: $blanco;
     background: rgb(200, 177, 118);
-  background: -moz-linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
-  background: -webkit-linear-gradient(90deg,  rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
-  background: linear-gradient(90deg,  rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+    background: -moz-linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+    background: -webkit-linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+    background: linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
 
     @include movil {
         padding-top: 2.5rem;
@@ -41,6 +38,17 @@
     overflow: hidden;
 
 
+    @include tablet {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "fotoArea1 fotoArea2"
+            "fotoArea3 fotoArea4"
+            "fotoArea5 fotoArea6";
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+
     @include movil {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -55,23 +63,19 @@
         padding: 0.5rem;
     }
 
-    @include tablet {
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "fotoArea1 fotoArea2"
-            "fotoArea3 fotoArea4"
-            "fotoArea5 fotoArea6";
-        gap: 1rem;
-        padding: 0.5rem;
+    &__titulo {
+        border-bottom: $gris solid;
+        border-width: 1px;
     }
 
 
     &__item {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        height: 100%;
+        padding: 1rem 2rem;
 
 
         &--foto {
@@ -87,8 +91,7 @@
             line-height: 2rem;
             margin-top: 1rem;
             color: $gris;
-            border-top: $gris solid;
-            border-width: 1px;
+
             @include font-size(1.2rem, 1rem)
         }
     }
@@ -135,12 +138,6 @@
     @extend .fotoArea1;
 }
 
-.foto {
-    &:hover {
-        box-shadow: $boxshadowNosotros;
-    }
-}
-
 .redes {
     list-style: none;
     display: flex;
@@ -154,12 +151,12 @@
     padding-right: 2rem;
     margin: 0px;
     border-radius: 50%;
-    
+
     &__color {
         color: $gris;
 
         &:hover {
             color: $dorado;
-          }
+        }
     }
 }

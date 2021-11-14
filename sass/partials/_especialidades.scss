@@ -2,15 +2,15 @@
 @import "./variables";
 @import "./fuente";
 @import "./responsive";
-@import "./reset";
+
 
 .especialidades {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 500px;
     grid-template-areas:
-        "fotoArea1 fotoArea2 fotoArea3"
-        "fotoArea4 fotoArea5 fotoArea6";
+        "foto1 foto2 foto3"
+        "foto4 foto5 foto6";
     gap: 1rem;
     height: auto;
     width: 100%;
@@ -20,36 +20,38 @@
     overflow: hidden;
 
 
-    @include movil {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "fotoArea1"
-            "fotoArea2"
-            "fotoArea3"
-            "fotoArea4"
-            "fotoArea5"
-            "fotoArea6";
-        gap: 1rem;
-        padding: 0.5rem;
-    }
-
     @include tablet {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
         grid-template-areas:
-            "fotoArea1 fotoArea2"
-            "fotoArea3 fotoArea4"
-            "fotoArea5 fotoArea6";
+            "foto1 foto2"
+            "foto3 foto4"
+            "foto5 foto6";
+        padding: 0.5rem;
+    }
+
+    @include movil {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "foto1"
+            "foto2"
+            "foto3"
+            "foto4"
+            "foto5"
+            "foto6";
+        gap: 1rem;
         padding: 0.5rem;
     }
 
 
     &__item {
+        height: 100%;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
+        padding: 0.5rem 1rem;
 
         &--foto {
             border-radius: 50%;
@@ -64,46 +66,53 @@
             line-height: 2rem;
             margin-top: 1rem;
             color: $gris;
-            border-top: $gris solid;
-            border-width: 1px;
             @include font-size(1.2rem, 1rem)
         }
     }
+
+    &__titulo {
+        line-height: 2rem;
+        border-bottom: $gris solid;
+        border-width: 1px;
+    }
 }
 
-.fotoArea1 {
-    grid-area: fotoArea1;
+
+.foto1 {
+    grid-area: foto1;
     background-color: $blancoTransparente;
     padding-top: 25px;
     width: 20rem;
     border-width: 1px;
+    box-shadow: boxshadowNosotros;
+
 
     @include movil {
         width: auto;
     }
 }
 
-.fotoArea2 {
-    grid-area: fotoArea2;
-    @extend .fotoArea1;
+.foto2 {
+    grid-area: foto2;
+    @extend .foto1;
 }
 
-.fotoArea3 {
-    grid-area: fotoArea3;
-    @extend .fotoArea1;
+.foto3 {
+    grid-area: foto3;
+    @extend .foto1;
 }
 
-.fotoArea4 {
-    grid-area: fotoArea4;
-    @extend .fotoArea1;
+.foto4 {
+    grid-area: foto4;
+    @extend .foto1;
 }
 
-.fotoArea5 {
-    grid-area: fotoArea5;
-    @extend .fotoArea1;
+.foto5 {
+    grid-area: foto5;
+    @extend .foto1;
 }
 
-.fotoArea6 {
-    grid-area: fotoArea6;
-    @extend .fotoArea1;
+.foto6 {
+    grid-area: foto6;
+    @extend .foto1;
 }

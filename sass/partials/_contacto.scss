@@ -3,7 +3,6 @@
 @import "./variables";
 @import "./fuente";
 @import "./responsive";
-@import "./reset";
 
 
 .contacto {
@@ -121,10 +120,6 @@
       width: 100%;
 
       @include movil {
-        width: 100%;
-      }
-
-      @include movil2 {
         width: 100%;
       }
     }

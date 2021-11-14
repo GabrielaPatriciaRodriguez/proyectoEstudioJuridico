@@ -1,7 +1,6 @@
 //Formato de la pagina inicial.
 
 @import "./variables";
-@import "./reset";
 @import "./fuente";
 @import "./responsive";
 
@@ -57,11 +56,6 @@
     align-content: flex-end;
     color: $blanco;
 
-    @include laptop {
-      margin-left: 5rem;
-      margin-top: 10rem;
-    }
-
     @include tablet {
       margin-left: 4rem;
       margin-top: 12rem;
@@ -75,10 +69,6 @@
     &--titulo {
       font-size: 5rem;
       font-weight: bold;
-
-      @include laptop {
-        font-size: 3.5rem;
-      }
 
       @include tablet {
         font-size: 2.9rem;
@@ -153,7 +143,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 500px;
   grid-template-areas:
-    "fotoArea1 fotoArea2 fotoArea3 fotoArea4";
+    "fotoA1 fotoA2 fotoA3 fotoA4";
   gap: 1rem;
   width: 100%;
   background-color: $blanco;
@@ -162,34 +152,37 @@
   overflow: hidden;
   justify-content: center;
 
+  
+  @include tablet {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+      "fotoA1 fotoA2"
+      "fotoA3 fotoA4";
+    padding: 0.5rem;
+    margin-top: 0%;
+  }
 
   @include movil {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-      "fotoArea1"
-      "fotoArea2"
-      "fotoArea3"
-      "fotoArea4";
-    padding: 0.5rem;
-    margin-top: 0%;
-  }
-
-  @include tablet {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "fotoArea1 fotoArea2"
-      "fotoArea3 fotoArea4";
+      "fotoA1"
+      "fotoA2"
+      "fotoA3"
+      "fotoA4";
     padding: 0.5rem;
     margin-top: 0%;
   }
 
   &__item {
+    padding: 2rem 0.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    min-height: 25rem;
+    height: 100%;
 
     &:hover {
       box-shadow: $boxshadowNosotros;
@@ -228,10 +221,9 @@
   }
 }
 
-.fotoArea1 {
-  grid-area: fotoArea1;
+.fotoA1 {
+  grid-area: fotoA1;
   background-color: $blancoTransparente;
-  padding: 2rem;
   border-width: 1rem;
 
   @include movil {
@@ -239,17 +231,17 @@
   }
 }
 
-.fotoArea2 {
-  grid-area: fotoArea2;
-  @extend .fotoArea1;
+.fotoA2 {
+  grid-area: fotoA2;
+  @extend .fotoA1;
 }
 
-.fotoArea3 {
-  grid-area: fotoArea3;
-  @extend .fotoArea1;
+.fotoA3 {
+  grid-area: fotoA3;
+  @extend .fotoA1;
 }
 
-.fotoArea4 {
-  grid-area: fotoArea4;
-  @extend .fotoArea1;
+.fotoA4 {
+  grid-area: fotoA4;
+  @extend .fotoA1;
 }
