@@ -5,8 +5,8 @@
 
 .mainPrincipal {
   background-color: $blanco;
+  
   // En movil
-
   @include movil {
     margin-top: 0;
   }
@@ -94,7 +94,7 @@
       background-color: $dorado;
       border-radius: 2rem;
       padding: 0.5rem;
-      border-color: $dorado;
+      border-color: none;
       color: $blanco;
       font-size: 1.2rem;
 
