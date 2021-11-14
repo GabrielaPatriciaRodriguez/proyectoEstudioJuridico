@@ -6,6 +6,13 @@
     
 }
 
+@mixin movil2 {
+    @media screen and (width: 425px) {
+        @content; 
+    }
+    
+}
+
 @mixin tablet {
     @media screen and (width: 768px) {
         @content; 

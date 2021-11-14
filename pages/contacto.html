@@ -7,12 +7,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacto</title>
 
+  <!-- Descripcion y palabras clave. -->
   <meta name="description" content="Formulario de contacto. Contactate. Hace una consulta gratis.">
   <meta name="keywords" content="consulta gratis, comunicate, contactate.">
 
 
   <!-- Loguito del Estudio -->
-  <link rel="shortcut icon" href="../assets/logosYColores/logo1.png" type="image/png">
+  <link rel="shortcut icon"
+    href="https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804057/proyectoEstudio/assets/logosYColores/logo1_h13jq0.png"
+    type="image/png">
   <!-- Iconos de facebook, Instagram y Twiter -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Libreria AOS -->
@@ -40,62 +43,70 @@
     <nav class="navbar navbar-expand-lg navbar-light encabezado__nav">
       <div class="container-fluid">
         <a class="navbar-brand" href="../index.html"><img class="encabezado__logo"
-            src="../assets/logosYColores/logo2.png" alt="logo" width="220vh" height="80vh"></a>
+            src="https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804057/proyectoEstudio/assets/logosYColores/logo2_soiwbo.png"
+            alt="logo" width="220vh" height="80vh"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
 
 
           <ul class="lista">
-            <li><a href="../pages/nosotros.html" class="lista__item">Nosotros</a></li>
-            <li><a href="../pages/especialidades.html" class="lista__item">Especialidades</a></li>
-            <li><a href="../pages/testimonios.html" class="lista__item">Testimonios</a></li>
-            <li><a href="../pages/contacto.html" class="lista__item lista__item--act">Contacto</a></li>
+            <li class="lista__li"><a href="../pages/nosotros.html" class="lista__item">Nosotros</a></li>
+            <li class="lista__li"><a href="../pages/especialidades.html" class="lista__item">Especialidades</a></li>
+            <li class="lista__li"><a href="../pages/testimonios.html" class="lista__item">Testimonios</a></li>
+            <li class="lista__li"><a href="../pages/contacto.html" class="lista__item lista__item--act">Contacto</a></li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
 
-  <main class="contacto">
-    <div>  
-    <!-- Formulario de Contacto -->
+  <main class="mainPrincipal contacto">
+    <div>
+      <!-- Formulario de Contacto -->
       <form action="" method="GET" class="formulario">
         <fieldset class="formulario__bg">
-          <legend class="formulario__color"><strong>CONTACTANOS</strong></legend>
-          <p class="formulario__parrafo">Para comunicarse con nosotros complete el siguiente <br> formulario. Deje al
-            final su mensaje. <br>
-            A la brevedad un profesional especializado <br> en la materia se comunicará con Ud. <br>
-            Desde ya muchas gracias por confiar en nosotros.</p>
+          <legend class="formulario__color"><strong>Su consulta es bienvenida</strong></legend>
+          <div class="formulario__divisiones1"> 
           <div class="formulario__divisiones">
-            <label for="name"></label>
+            <label for="name">Nombre</label>
             <input class="formulario__divisiones--input" type="text" name="name" id="name"
-              placeholder="Nombre y Apellido" required />
+              placeholder="Escriba su Nombre" required />
           </div>
           <div class="formulario__divisiones">
-            <label for="mail"></label>
+            <label for="name">Apellido</label>
+            <input class="formulario__divisiones--input" type="text" name="name" id="name"
+              placeholder="Ingrese su Apellido" required />
+          </div>
+          </div>
+          <div class="formulario__divisiones1"> 
+          <div class="formulario__divisiones">
+            <label for="mail">E-mail</label>
             <input class="formulario__divisiones--input" type="text" name="mail" id="mail"
-              placeholder="Correo Electrónico" required />
+              placeholder="Ej. estudioJuridico@gmail.com" required />
           </div>
           <div class="formulario__divisiones">
-            <label for="telephone"></label>
+            <label for="telephone">Tel./Cel.</label>
             <input class="formulario__divisiones--input" type="text" name="telephone" id="telephone"
-              placeholder="Teléfono" required />
+              placeholder="Ingrese su Nº de Tel." required />
           </div>
+          </div>
+ 
           <div class="formulario__divisiones">
-            <label for="area"></label>
-            <input class="formulario__divisiones--input" type="text" name="area" id="area" placeholder="Materia"
+            <label for="area">Materia</label>
+            <input class="formulario__divisiones--input" type="text" name="area" id="area" placeholder="Derecho Civil, Comercial, Laboral, etc."
               required />
           </div>
           <div class="formulario__divisiones">
-            <label for="mensaje"></label>
-            <textarea class="formulario__divisiones--text-area" name="mensaje" id="mensaje" cols="50"
-              rows="10"></textarea>
+            <label for="mensaje">Mensaje</label>
+            <textarea class="formulario__divisiones--text-area" name="mensaje" id="mensaje" cols="25"
+              rows="8"></textarea>
           </div>
+         
           <div>
-            <label for="radio" class="formulario__color">Si el contenido es correcto haga click</label>
+            <label for="radio" class="formulario__color1">Si el contenido es correcto haga click</label>
             <input type="checkbox" />
           </div>
           <div>
@@ -104,8 +115,8 @@
           </div>
         </fieldset>
       </form>
-
     </div>
+
   </main>
 
   <div class="container-fluid preguntas p-4">
@@ -169,41 +180,47 @@
   </div>
 
 
-  <footer class="pie">
+  <footer>
     <!-- pie de pagina -->
-    <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="pie__logo">
-      <a href="./index.html"><img src="../assets/logosYColores/blanco.png" alt="logo1" width="150" height="120"></a>
+    <div class="pie">
+      <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="pie__logo">
+        <a href="./index.html"><img
+            src="https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804061/proyectoEstudio/assets/logosYColores/blanco_hjfdbi.png"
+            alt="logo1" width="150" height="120"></a>
+      </div>
+      <div class="pie__pag">
+        <h3 class="pie__pag--tit">Páginas de Interes</h3>
+        <!-- Lista de paginas juridicas de interes -->
+        <ul class="pie__lista">
+          <li><a href="https://www.pjn.gov.ar/" class="pie__lista--item">página web del poder judicial de la Nación</a>
+          </li>
+          <li><a href="http://www.juscorrientes.gov.ar/" class="pie__lista--item">página web del poder judicial de la
+              Pcia.</a></li>
+          <li><a href="https://iol.juscorrientes.gov.ar/" class="pie__lista--item">Iurix Online Pcia. de Corrientes</a>
+          </li>
+          <li><a href="https://colegioquinta.com/" class="pie__lista--item">página web del Colegio de Abogados</a></li>
+        </ul>
+      </div>
+      <div class="pie__dir">
+        <a href="../pages/contacto.html" class="pie__lista--item"><i class="fas fa-map-marker-alt"></i><strong> Av.
+            Lavalle 291</strong><br>Ciudad - Provincia</a>
+        <p><i class="fas fa-phone-square"></i> Tel. 2658-5869</p>
+        <p><i class="far fa-envelope"></i> E-mail: estudjco@gmail.com</p>
+      </div>
+      <div class="redes">
+        <ul class="pie__redes">
+          <!-- Lista de iconos: facebook, Instagram, Twiter -->
+          <li class="pie__iconos"><a href="#"><i class="fab fa-facebook pie__iconos--color"></i></a></li>
+          <li class="pie__iconos"><a href="#"><i class="fab fa-instagram pie__iconos--color"></i></a></li>
+          <li class="pie__iconos"><a href="#"><i class="fab fa-whatsapp pie__iconos--color"></i></i></a></li>
+        </ul>
+      </div>
     </div>
-    <div class="pie__pag">
-      <h3 class="pie__pag--tit">Páginas de Interes</h3>
-      <!-- Lista de paginas juridicas de interes -->
-      <ul class="pie__lista">
-        <li><a href="https://www.pjn.gov.ar/" class="pie__lista--item">página web del poder judicial de la Nación</a>
-        </li>
-        <li><a href="http://www.juscorrientes.gov.ar/" class="pie__lista--item">página web del poder judicial de la
-            Pcia.</a></li>
-        <li><a href="https://iol.juscorrientes.gov.ar/" class="pie__lista--item">Iurix Online Pcia. de Corrientes</a>
-        </li>
-        <li><a href="https://colegioquinta.com/" class="pie__lista--item">página web del Colegio de Abogados</a></li>
-      </ul>
-    </div>
-    <div class="pie__dir">
-      <a href="../pages/contacto.html" class="pie__lista--item"><i class="fas fa-map-marker-alt"></i><strong> Av. Lavalle 291</strong><br>Ciudad - Provincia</a>
-      <p><i class="fas fa-phone-square"></i> Tel. 2658-5869</p>
-      <p><i class="far fa-envelope"></i> E-mail: estudjco@gmail.com</p>
-    </div>
-    <div class="redes">
-      <ul class="pie__redes">
-        <!-- Lista de iconos: facebook, Instagram, Twiter -->
-        <li class="pie__iconos"><a href="#"><i class="fab fa-facebook pie__iconos--color"></i></a></li>
-        <li class="pie__iconos"><a href="#"><i class="fab fa-instagram pie__iconos--color"></i></a></li>
-        <li class="pie__iconos"><a href="#"><i class="fab fa-whatsapp pie__iconos--color"></i></i></a></li>
-      </ul>
+    <div class="copyright">
+      <p>Copyright <i class="far fa-copyright"></i> -Todos los derechos reservados-</p>
     </div>
   </footer>
-  <div class="copyright">
-    <p>Copyright <i class="far fa-copyright"></i> -Todos los derechos reservados-</p>
-  </div>
+
   <!-- Script de Libreria AOS -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>

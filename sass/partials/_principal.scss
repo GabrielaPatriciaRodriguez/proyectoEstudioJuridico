@@ -3,11 +3,11 @@
 @import "./fuente";
 @import "./responsive";
 
-main {
+.mainPrincipal {
   background-color: $blanco;
   margin-top: 9.688rem;
-
   // En movil
+
   @include movil {
     margin-top: 0;
   }
@@ -23,7 +23,7 @@ main {
     "foto foto foto"
     "foto foto foto"
     "foto foto foto"
-    ". parrafo parrafo";
+    "parrafo parrafo parrafo";
   overflow: hidden;
 
   @include movil {
@@ -40,11 +40,7 @@ main {
   &__foto {
     grid-area: foto;
     display: flex;
-    // background-image: url(../assets/tinified/principal2.jpg);
-    // background-image: url(../assets/tinified/principal3.jpg);
-    background-image: url(../assets/tinified/principal.jpg);
-    // background-image: url(../assets/tinified/formulario.jpeg);
-    // background-image:linear-gradient(rgba(12, 12, 12, 0.6) rgba(12, 12, 12, 0.6)), url(../assets/principal.jpeg);
+    background-image: url("https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804066/proyectoEstudio/assets/tinified/principal_s2bnwq.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

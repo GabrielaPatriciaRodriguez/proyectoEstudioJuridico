@@ -4,16 +4,25 @@
 @import "./responsive";
 @import "./principal";
 @import "./principal3";
+@import "./reset";
 
 
-.main__seccion {
-    padding-top: 2rem;
+
+.main__titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
     color: $blanco;
     background: rgb(200, 177, 118);
     background: -moz-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
     background: -webkit-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
     background: linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+
+    @include movil {
+        padding-top: 2.5rem;
+    }
 }
 
 .nosotros {
@@ -42,7 +51,7 @@
             "fotoArea4"
             "fotoArea5"
             "fotoArea6";
-        gap: 1rem;
+        // gap: 1rem;
         padding: 0.5rem;
     }
 
@@ -53,7 +62,7 @@
             "fotoArea1 fotoArea2"
             "fotoArea3 fotoArea4"
             "fotoArea5 fotoArea6";
-        gap: 1rem;
+        // gap: 1rem;
         padding: 0.5rem;
     }
 

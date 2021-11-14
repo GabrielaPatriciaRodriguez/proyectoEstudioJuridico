@@ -1,18 +1,16 @@
 @import "./variables";
 @import "./responsive";
 
+
+
 .encabezado {
-  height: 7.5rem;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-  /* por la animacion */
 
   @include movil {
     position: relative;
-    height: 5rem;
   }
 
   &__contactanos {
@@ -52,6 +50,7 @@
 
   &__nav {
     background-color: $gris;
+    padding-bottom: 0.6rem;
   }
 
   &__logo {
@@ -88,8 +87,15 @@
   /* Para que en movil se muestren en columna */
   @include movil {
     flex-direction: column;
+    padding: 0rem;
+    margin: 0rem;
   }
 
+  &__li {
+    @include movil {
+      padding-top: 1rem;
+    }
+  }
 
   &__item {
     color: $blanco;
@@ -108,7 +114,6 @@
       /*Cuando pase el mouse por el ancor de las listas el menu nav resalte la palabra en 
      dorado y cambie el tamaño de la letra*/
       color: $dorado;
-      font-size: 1.1rem;
     }
   }
 }

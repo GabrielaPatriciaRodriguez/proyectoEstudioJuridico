@@ -21,19 +21,15 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 /* COLORES */
 /*SOMBRA*/
 .encabezado {
-  height: 7.5rem;
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 10;
-  /* por la animacion */
 }
 
 @media screen and (max-width: 425px) {
   .encabezado {
     position: relative;
-    height: 5rem;
   }
 }
 
@@ -77,6 +73,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 
 .encabezado__nav {
   background-color: #3e474c;
+  padding-bottom: 0.6rem;
 }
 
 .encabezado__logo {
@@ -131,6 +128,14 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0rem;
+    margin: 0rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .lista__li {
+    padding-top: 1rem;
   }
 }
 
@@ -154,7 +159,6 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /*Cuando pase el mouse por el ancor de las listas el menu nav resalte la palabra en 
      dorado y cambie el tamaño de la letra*/
   color: #c8b176;
-  font-size: 1.1rem;
 }
 
 /* COLORES */
@@ -176,13 +180,13 @@ créditos del mixin: https://codepen.io/jakob-e/pen/yVyYzv
 */
 /* Haciendo uso del mixin de arriba con @include podemos declarar los valores máximos y minimos [en ese orden] 
 en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max: */
-main {
+.mainPrincipal {
   background-color: #f2f2f2;
   margin-top: 9.688rem;
 }
 
 @media screen and (max-width: 425px) {
-  main {
+  .mainPrincipal {
     margin-top: 0;
   }
 }
@@ -194,7 +198,7 @@ main {
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 200px 200px 150px auto;
       grid-template-rows: 200px 200px 150px auto;
-      grid-template-areas: "foto foto foto" "foto foto foto" "foto foto foto" ". parrafo parrafo";
+      grid-template-areas: "foto foto foto" "foto foto foto" "foto foto foto" "parrafo parrafo parrafo";
   overflow: hidden;
 }
 
@@ -217,7 +221,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url(../assets/tinified/principal.jpg);
+  background-image: url("https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804066/proyectoEstudio/assets/tinified/principal_s2bnwq.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -324,8 +328,8 @@ main {
 
 .principal__parrafo {
   -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: parrafo;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -545,8 +549,8 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* Para que en movil el pie de pagina se muestre en columnas y centrado */
   /* utilizando gradientes para el fondo del footer*/
   background: #c8b176;
-  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(200, 177, 118, 0.975228)), color-stop(93%, #3e474c));
-  background: linear-gradient(90deg, rgba(200, 177, 118, 0.975228) 3%, #3e474c 93%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(122, 107, 69, 0.975)), color-stop(93%, #3e474c));
+  background: linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, #3e474c 93%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
   /* Para que en movil se vean los iconos de redes sociales en fila y centrados */
 }
@@ -646,6 +650,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   /* color de letra */
   text-decoration: none;
   /*Sin subrayado */
+  padding-bottom: 1rem;
 }
 
 .pie__lista--item:hover {
@@ -665,7 +670,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 @media screen and (max-width: 425px) {
   .pie__dir {
     padding-top: 1.5rem;
-    line-height: 1rem;
+    line-height: 2rem;
   }
 }
 
@@ -739,8 +744,8 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
           justify-content: center;
   padding-top: 1rem;
   background: #c8b176;
-  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(200, 177, 118, 0.975228)), color-stop(93%, #3e474c));
-  background: linear-gradient(90deg, rgba(200, 177, 118, 0.975228) 3%, #3e474c 93%);
+  background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(122, 107, 69, 0.975)), color-stop(93%, #3e474c));
+  background: linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, #3e474c 93%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
   color: #f2f2f2;
   border-style: solid;
@@ -802,13 +807,13 @@ créditos del mixin: https://codepen.io/jakob-e/pen/yVyYzv
 */
 /* Haciendo uso del mixin de arriba con @include podemos declarar los valores máximos y minimos [en ese orden] 
 en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max: */
-main {
+.mainPrincipal {
   background-color: #f2f2f2;
   margin-top: 9.688rem;
 }
 
 @media screen and (max-width: 425px) {
-  main {
+  .mainPrincipal {
     margin-top: 0;
   }
 }
@@ -820,7 +825,7 @@ main {
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 200px 200px 150px auto;
       grid-template-rows: 200px 200px 150px auto;
-      grid-template-areas: "foto foto foto" "foto foto foto" "foto foto foto" ". parrafo parrafo";
+      grid-template-areas: "foto foto foto" "foto foto foto" "foto foto foto" "parrafo parrafo parrafo";
   overflow: hidden;
 }
 
@@ -843,7 +848,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url(../assets/tinified/principal.jpg);
+  background-image: url("https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804066/proyectoEstudio/assets/tinified/principal_s2bnwq.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -950,8 +955,8 @@ main {
 
 .principal__parrafo {
   -ms-grid-row: 4;
-  -ms-grid-column: 2;
-  -ms-grid-column-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
   grid-area: parrafo;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1205,7 +1210,6 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4" "fotoArea5 fotoArea6";
-    gap: 1rem;
     padding: 0.5rem;
   }
 }
@@ -1306,13 +1310,40 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   grid-area: fotoArea6;
 }
 
-.main__seccion {
-  padding-top: 2rem;
+* {
+  /* Selector universal, aplica a toda la pagina web*/
+  font-family: "Roboto", sans-serif;
+  /* fuente para toda mi pagina */
+  margin: 0;
+  /* margen de mi pagina */
+  padding: 0;
+  /* espacio entre el contenido del elemento y su borde */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main__titulo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
   color: #f2f2f2;
   background: #c8b176;
   background: -webkit-gradient(linear, left top, right top, color-stop(3%, rgba(200, 177, 118, 0.975228)), color-stop(93%, #3e474c));
   background: linear-gradient(90deg, rgba(200, 177, 118, 0.975228) 3%, #3e474c 93%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+}
+
+@media screen and (max-width: 425px) {
+  .main__titulo {
+    padding-top: 2.5rem;
+  }
 }
 
 .nosotros {
@@ -1339,7 +1370,6 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "fotoArea1" "fotoArea2" "fotoArea3" "fotoArea4" "fotoArea5" "fotoArea6";
-    gap: 1rem;
     padding: 0.5rem;
   }
 }
@@ -1351,7 +1381,6 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4" "fotoArea5 fotoArea6";
-    gap: 1rem;
     padding: 0.5rem;
   }
 }
@@ -1543,7 +1572,6 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
     -ms-grid-rows: auto;
         grid-template-rows: auto;
         grid-template-areas: "fotoArea1 fotoArea2" "fotoArea3 fotoArea4" "fotoArea5 fotoArea6";
-    gap: 1rem;
     padding: 0.5rem;
   }
 }
@@ -1794,13 +1822,15 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   -webkit-box-pack: left;
       -ms-flex-pack: left;
           justify-content: left;
-  background-image: url("../assets/tinified/formulario.jpeg");
+  background-image: url("https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804061/proyectoEstudio/assets/tinified/formulario_j2atvi.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-left: 200px;
+  padding-left: 100px;
   margin-top: auto;
   overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 425px) {
@@ -1812,45 +1842,93 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   }
 }
 
+@media screen and (width: 768px) {
+  .contacto {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    padding-left: 0px;
+  }
+}
+
 .formulario {
   text-align: center;
-  padding: 200px 50px 150px 50px;
+  padding: 12rem 0rem 1rem 1rem;
+  color: #f2f2f2;
 }
 
 @media screen and (max-width: 425px) {
   .formulario {
-    padding: 0px;
+    padding: 0rem;
+  }
+}
+
+.formulario__divisiones1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media screen and (max-width: 425px) {
+  .formulario__divisiones1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
 .formulario__bg {
-  background-color: #5e6d7583;
+  border-style: solid;
+  border-color: #f2f2f2;
+  border-width: 1px;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 425px) {
+  .formulario__bg {
+    border-style: none;
+  }
 }
 
 .formulario__color {
   color: #f2f2f2;
+  font-size: 2rem;
+  padding-bottom: 1.2rem;
 }
 
-.formulario__parrafo {
-  font-size: 1rem;
-  padding-top: 0.8rem;
+.formulario__color1 {
   color: #f2f2f2;
-  margin: 1rem;
+  font-size: 1.3rem;
+  padding-bottom: 1.2rem;
+  padding-top: 1.2rem;
 }
 
 @media screen and (max-width: 425px) {
-  .formulario__parrafo {
-    font-size: 0.8rem;
+  .formulario__color1 {
+    font-size: 1rem;
   }
 }
 
 .formulario__divisiones {
-  margin: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  margin: 0.5rem;
 }
 
 @media screen and (max-width: 425px) {
   .formulario__divisiones {
-    margin: 10px;
+    margin: 0.2rem;
   }
 }
 
@@ -1865,7 +1943,19 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 }
 
 .formulario__divisiones--text-area {
-  width: 18rem;
+  width: 40rem;
+}
+
+@media screen and (max-width: 425px) {
+  .formulario__divisiones--text-area {
+    width: 19rem;
+  }
+}
+
+@media screen and (width: 425px) {
+  .formulario__divisiones--text-area {
+    width: 22rem;
+  }
 }
 
 .boton, .reset, .enviar {
@@ -1887,6 +1977,10 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 
 .preguntas {
   background-color: #3e474c;
+}
+
+.pregunta1 {
+  color: #3e474c;
 }
 
 /* COLORES */

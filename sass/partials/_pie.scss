@@ -20,9 +20,9 @@
 
   /* utilizando gradientes para el fondo del footer*/
   background: rgb(200, 177, 118);
-  background: -moz-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
-  background: -webkit-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
-  background: linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+  background: -moz-linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+  background: -webkit-linear-gradient(90deg,  rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+  background: linear-gradient(90deg,  rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
 
   &__logo {
@@ -76,6 +76,7 @@
       /* color de letra */
       text-decoration: none;
       /*Sin subrayado */
+      padding-bottom: 1rem;
       
       &:hover {
         color: $gris;
@@ -94,7 +95,7 @@
 
     @include movil {
       padding-top: 1.5rem;
-      line-height: 1rem;
+      line-height: 2rem;
     }
 
     @include tablet {
@@ -155,10 +156,11 @@
   justify-content: center;
   padding-top: 1rem;
   background: rgb(200, 177, 118);
-  background: -moz-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
-  background: -webkit-linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
-  background: linear-gradient(90deg, rgba(200, 177, 118, 0.9752275910364145) 3%, rgba(62, 71, 76, 1) 93%);
+  background: -moz-linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+  background: -webkit-linear-gradient(90deg,  rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+  background: linear-gradient(90deg,  rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
+
   color: $blanco;
   border-style: solid;
   border-width: 1px 0px 0px 0px;
