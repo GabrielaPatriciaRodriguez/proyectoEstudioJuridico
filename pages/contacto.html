@@ -64,33 +64,53 @@
   </header>
 
   <main class="mainPrincipal contacto">
-    <div>
+    <div class="contacto__info">
+
+       <!-- Insertando mapa de google maps -->
+       <div class="mapa">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.8518540353025!2d-56.02508801906843!3d-28.05300654990896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9456680718401be3%3A0x5d2a04ae90addd6d!2sEstudio%20Rodriguez%20%26%20Asociados!5e0!3m2!1ses!2sar!4v1634721165703!5m2!1ses!2sar"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+
       <!-- Formulario de Contacto -->
       <form action="" method="GET" class="formulario">
         <fieldset class="formulario__bg">
           <legend class="formulario__color"><strong>Su consulta es bienvenida</strong></legend>
+          
           <div class="formulario__divisiones1"> 
-          <div class="formulario__divisiones">
+          
+            <div class="formulario__divisiones">
+            
+              <div class="formulario__divisiones2">  
             <label for="name">Nombre</label>
             <input class="formulario__divisiones--input" type="text" name="name" id="name"
               placeholder="Escriba su Nombre" required />
+            </div>
           </div>
+
           <div class="formulario__divisiones">
+            <div class="formulario__divisiones2">  
             <label for="name">Apellido</label>
             <input class="formulario__divisiones--input" type="text" name="name" id="name"
               placeholder="Ingrese su Apellido" required />
+            </div>
           </div>
           </div>
           <div class="formulario__divisiones1"> 
           <div class="formulario__divisiones">
+            <div class="formulario__divisiones2">  
             <label for="mail">E-mail</label>
             <input class="formulario__divisiones--input" type="text" name="mail" id="mail"
               placeholder="Ej. estudioJuridico@gmail.com" required />
+            </div>
           </div>
           <div class="formulario__divisiones">
+            <div class="formulario__divisiones2"> 
             <label for="telephone">Tel./Cel.</label>
             <input class="formulario__divisiones--input" type="text" name="telephone" id="telephone"
               placeholder="Ingrese su Nº de Tel." required />
+            </div>
           </div>
           </div>
  
@@ -115,70 +135,63 @@
           </div>
         </fieldset>
       </form>
+           
     </div>
 
-  </main>
-
-  <div class="container-fluid preguntas p-4">
-    <!-- Insertando mapa de google maps -->
-    <div class="row d-flex justify-content-center">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.8518540353025!2d-56.02508801906843!3d-28.05300654990896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9456680718401be3%3A0x5d2a04ae90addd6d!2sEstudio%20Rodriguez%20%26%20Asociados!5e0!3m2!1ses!2sar!4v1634721165703!5m2!1ses!2sar"
-        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-    </div>
-    <div class="row d-flex justify-content-center">
-      <h3 class="d-flex justify-content-center text-decoration-underline text-white p-4">Preguntas Frecuentes</h3>
-
-      <div class="accordion col-lg-10" id="accordionPanelsStayOpenExample">
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingOne">
-            <button class="accordion-button" type="button" data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
-              aria-controls="panelsStayOpen-collapseOne">
-              Si queremos concurrir personalmente al Estudio Jurídico: ¿Cuál es el horario de atención?
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
-            aria-labelledby="panelsStayOpen-headingOne">
-            <div class="accordion-body">
-              El horario de atención en nuestras oficinas es de 9 a 17 horas, de lunes a viernes.
+    <div class="container-fluid preguntas p-4">
+      <div class="row d-flex justify-content-center">
+        <h3 class="d-flex justify-content-center text-decoration-underline text-white p-4">Preguntas Frecuentes</h3>
+        <div class="accordion col-lg-10" id="accordionPanelsStayOpenExample">
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                aria-controls="panelsStayOpen-collapseOne">
+                Si queremos concurrir personalmente al Estudio Jurídico: ¿Cuál es el horario de atención?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+              aria-labelledby="panelsStayOpen-headingOne">
+              <div class="accordion-body">
+                El horario de atención en nuestras oficinas es de 9 a 17 horas, de lunes a viernes.
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseTwo">
-              Ante una urgencia fuera del horario de atención: ¿Cómo puedo contactarlos?
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
-            aria-labelledby="panelsStayOpen-headingTwo">
-            <div class="accordion-body">
-              Ante una urgencia fuera del horario de atención comuníquese al 0810-555-4856.
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseTwo">
+                Ante una urgencia fuera del horario de atención: ¿Cómo puedo contactarlos?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingTwo">
+              <div class="accordion-body">
+                Ante una urgencia fuera del horario de atención comuníquese al 0810-555-4856.
+              </div>
             </div>
           </div>
-        </div>
-        <div class="accordion-item">
-          <h2 class="accordion-header" id="panelsStayOpen-headingThree">
-            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-              data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
-              aria-controls="panelsStayOpen-collapseThree">
-              Si completo el formulario de la página: ¿Cuánto tiempo demoran en responder?
-            </button>
-          </h2>
-          <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
-            aria-labelledby="panelsStayOpen-headingThree">
-            <div class="accordion-body">
-              Ud. tendrá una respuesta dentro de las 24 horas hábiles.
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                aria-controls="panelsStayOpen-collapseThree">
+                Si completo el formulario de la página: ¿Cuánto tiempo demoran en responder?
+              </button>
+            </h2>
+            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+              aria-labelledby="panelsStayOpen-headingThree">
+              <div class="accordion-body">
+                Ud. tendrá una respuesta dentro de las 24 horas hábiles.
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
+  
+  </main>
 
   <footer>
     <!-- pie de pagina -->

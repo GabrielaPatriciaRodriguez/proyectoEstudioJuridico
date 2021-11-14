@@ -7,15 +7,17 @@
 
 .contacto {
   display: flex;
-  justify-content:left;
+  padding: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-image: url("https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804061/proyectoEstudio/assets/tinified/formulario_j2atvi.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding-left: 100px;
-  margin-top: auto;
   overflow: hidden;
   object-fit: cover;
+  width: 100%;
 
   @include movil {
     justify-content: center;
@@ -26,12 +28,32 @@
     justify-content: center;
     padding-left: 0px;
   }
+
+  &__info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    max-width: 1600px;
+    max-height: 800px;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+
+    @include movil {
+      flex-direction: column-reverse;
+    }
+
+    @include tablet {
+      flex-direction: column-reverse;
+    }
+  }
 }
 
 .formulario {
   text-align: center;
-  padding: 12rem 0rem 1rem 1rem;
   color: $blanco;
+  width: 100%;
 
   @include movil {
     padding: 0rem;
@@ -46,12 +68,16 @@
     }
   }
 
+  &__divisiones2 {
+    margin: 0.5rem;
+  }
+
 
   &__bg {
-    border-style: solid;
-    border-color: $blanco;
-    border-width: 1px;
-    padding: 2rem;
+    // border-style: solid;
+    // border-color: $blanco;
+    // border-width: 1px;
+    width: 100%;
 
     @include movil {
       border-style: none;
@@ -63,6 +89,7 @@
     color: $blanco;
     font-size: 2rem;
     padding-bottom: 1.2rem;
+    padding-top: 0rem;
   }
 
 // formato de checkbox
@@ -81,31 +108,46 @@
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin: 0.5rem;
+    width: 100%;
 
     @include movil {
       margin: 0.2rem;
     }
 
     &--input {
-      padding: 0.5rem 7rem 0.5rem 0;
-
+      width: 100%;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+      
       @include movil {
-        padding-right: 6rem;
+        width: 100%;
       }
     }
 
     &--text-area {
-      width: 40rem;
+      width: 100%;
 
       @include movil {
-        width: 19rem;
+        width: 100%;
       }
 
       @include movil2 {
-        width: 22rem;
+        width: 100%;
       }
     }
+  }
+}
+
+.mapa {
+  width: 100%;
+  height: 44rem;
+  padding-right: 1rem;
+
+  @include tablet {
+    padding-right: 0rem;
+  }
+  @include movil {
+    padding-right: 0rem;
   }
 }
 

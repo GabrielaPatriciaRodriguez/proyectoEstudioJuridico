@@ -6,7 +6,7 @@
 
 
 .testimonios {
-  background-image: url("../assets/tinified/clientesFelices.jpeg");
+  background-image: url("https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804063/proyectoEstudio/assets/tinified/clientesFelices_qxrtrr.jpg");
   display: flex;
   justify-content: space-around;
   width: 100%;
@@ -35,12 +35,12 @@
     width: 100%;
     align-self: center;
     background-color: $blancoTransparente;
-    border-radius: 10%;
+    // border-radius: 10%;
     padding: 2rem;
     font-style: italic;
     font-size: 1rem;
     color: $negro;
-    box-shadow: $boxshadowTestimonios;
+    box-shadow: $boxshadowNosotros;
     overflow: hidden;
     margin: 1rem;
 
