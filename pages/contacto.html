@@ -56,7 +56,8 @@
             <li class="lista__li"><a href="../pages/nosotros.html" class="lista__item">Nosotros</a></li>
             <li class="lista__li"><a href="../pages/especialidades.html" class="lista__item">Especialidades</a></li>
             <li class="lista__li"><a href="../pages/testimonios.html" class="lista__item">Testimonios</a></li>
-            <li class="lista__li"><a href="../pages/contacto.html" class="lista__item lista__item--act">Contacto</a></li>
+            <li class="lista__li"><a href="../pages/contacto.html" class="lista__item lista__item--act">Contacto</a>
+            </li>
           </ul>
         </div>
       </div>
@@ -66,8 +67,8 @@
   <main class="mainPrincipal contacto">
     <div class="contacto__info">
 
-       <!-- Insertando mapa de google maps -->
-       <div class="mapa">
+      <!-- Insertando mapa de google maps -->
+      <div class="mapa">
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2960.8518540353025!2d-56.02508801906843!3d-28.05300654990896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9456680718401be3%3A0x5d2a04ae90addd6d!2sEstudio%20Rodriguez%20%26%20Asociados!5e0!3m2!1ses!2sar!4v1634721165703!5m2!1ses!2sar"
           width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
@@ -77,58 +78,58 @@
       <form action="" method="GET" class="formulario">
         <fieldset class="formulario__bg">
           <legend class="formulario__color"><strong>Su consulta es bienvenida</strong></legend>
-          
-          <div class="formulario__divisiones1"> 
-          
+
+          <div class="formulario__divisiones1">
+
             <div class="formulario__divisiones">
-            
-              <div class="formulario__divisiones2">  
-            <label for="name">Nombre</label>
-            <input class="formulario__divisiones--input" type="text" name="name" id="name"
-              placeholder="Escriba su Nombre" required />
+
+              <div class="formulario__divisiones2">
+                <label for="name">Nombre</label>
+                <input class="formulario__divisiones--input" type="text" name="name" id="name"
+                  placeholder="Escriba su Nombre" required />
+              </div>
+            </div>
+
+            <div class="formulario__divisiones">
+              <div class="formulario__divisiones2">
+                <label for="name">Apellido</label>
+                <input class="formulario__divisiones--input" type="text" name="name" id="name"
+                  placeholder="Ingrese su Apellido" required />
+              </div>
+            </div>
+          </div>
+          <div class="formulario__divisiones1">
+            <div class="formulario__divisiones">
+              <div class="formulario__divisiones2">
+                <label for="mail">E-mail</label>
+                <input class="formulario__divisiones--input" type="text" name="mail" id="mail"
+                  placeholder="Ej. estudioJuridico@gmail.com" required />
+              </div>
+            </div>
+            <div class="formulario__divisiones">
+              <div class="formulario__divisiones2">
+                <label for="telephone">Tel./Cel.</label>
+                <input class="formulario__divisiones--input" type="text" name="telephone" id="telephone"
+                  placeholder="Ingrese su Nº de Tel." required />
+              </div>
             </div>
           </div>
 
           <div class="formulario__divisiones">
-            <div class="formulario__divisiones2">  
-            <label for="name">Apellido</label>
-            <input class="formulario__divisiones--input" type="text" name="name" id="name"
-              placeholder="Ingrese su Apellido" required />
-            </div>
-          </div>
-          </div>
-          <div class="formulario__divisiones1"> 
-          <div class="formulario__divisiones">
-            <div class="formulario__divisiones2">  
-            <label for="mail">E-mail</label>
-            <input class="formulario__divisiones--input" type="text" name="mail" id="mail"
-              placeholder="Ej. estudioJuridico@gmail.com" required />
+            <div class="formulario__divisiones2">
+              <label for="area">Materia</label>
+              <input class="formulario__divisiones--input" type="text" name="area" id="area"
+                placeholder="Derecho Civil, Comercial, Laboral, etc." required />
             </div>
           </div>
           <div class="formulario__divisiones">
-            <div class="formulario__divisiones2"> 
-            <label for="telephone">Tel./Cel.</label>
-            <input class="formulario__divisiones--input" type="text" name="telephone" id="telephone"
-              placeholder="Ingrese su Nº de Tel." required />
+            <div class="formulario__divisiones2">
+              <label for="mensaje">Mensaje</label>
+              <textarea class="formulario__divisiones--text-area" name="mensaje" id="mensaje" cols="25"
+                rows="8"></textarea>
             </div>
           </div>
-          </div>
- 
-          <div class="formulario__divisiones">
-            <div class="formulario__divisiones2">  
-            <label for="area">Materia</label>
-            <input class="formulario__divisiones--input" type="text" name="area" id="area" placeholder="Derecho Civil, Comercial, Laboral, etc."
-              required />
-            </div>
-          </div>
-          <div class="formulario__divisiones">
-            <div class="formulario__divisiones2">  
-            <label for="mensaje">Mensaje</label>
-            <textarea class="formulario__divisiones--text-area" name="mensaje" id="mensaje" cols="25"
-              rows="8"></textarea>
-            </div>
-          </div>
-         
+
           <div>
             <label for="radio" class="formulario__color1">Si el contenido es correcto haga click</label>
             <input type="checkbox" />
@@ -139,12 +140,12 @@
           </div>
         </fieldset>
       </form>
-           
+
     </div>
 
     <div class="container-fluid preguntas p-4">
       <div class="row d-flex justify-content-center">
-        <h3 class="d-flex justify-content-center text-decoration-underline text-white p-4 padding">Preguntas Frecuentes</h3>
+        <h3 class="d-flex justify-content-center text-decoration-underline text-white p-4">Preguntas Frecuentes</h3>
         <div class="accordion col-lg-10" id="accordionPanelsStayOpenExample">
           <div class="accordion-item">
             <h2 class="accordion-header" id="panelsStayOpen-headingOne">
@@ -194,7 +195,7 @@
         </div>
       </div>
     </div>
-  
+
   </main>
 
   <footer>

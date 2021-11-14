@@ -100,11 +100,10 @@
     padding-top: 25px;
     width: 20rem;
     border-width: 1px;
-    box-shadow: $boxshadowNosotros;
 
-    // &:hover {
-    //     box-shadow: $boxshadowNosotros;
-    // }
+    &:hover {
+        box-shadow: $boxshadowNosotros;
+    }
 
     @include movil {
         width: auto;

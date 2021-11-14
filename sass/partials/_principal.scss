@@ -1,3 +1,5 @@
+//Formato de la pagina inicial.
+
 @import "./variables";
 @import "./reset";
 @import "./fuente";
@@ -5,7 +7,7 @@
 
 .mainPrincipal {
   background-color: $blanco;
-  
+
   // En movil
   @include movil {
     margin-top: 0;
@@ -43,7 +45,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    object-fit:scale-down;
+    object-fit: scale-down;
   }
 
   &__texto {
@@ -94,7 +96,7 @@
       background-color: $dorado;
       border-radius: 2rem;
       padding: 0.5rem;
-      border-color: none;
+      border-style: none;
       color: $blanco;
       font-size: 1.2rem;
 
@@ -144,6 +146,8 @@
   }
 }
 
+//Noticias, novedades, legislacion relevante, utilizando grid.
+
 .noticias {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -157,7 +161,7 @@
   padding: 1rem;
   overflow: hidden;
   justify-content: center;
-  
+
 
   @include movil {
     grid-template-columns: 1fr;
@@ -189,7 +193,7 @@
 
     &:hover {
       box-shadow: $boxshadowNosotros;
-  }
+    }
 
     &--foto {
       border-radius: 50%;
@@ -203,7 +207,7 @@
       line-height: 2rem;
       margin-top: 1rem;
       color: $gris;
-      font-weight:bold;
+      font-weight: bold;
       border-bottom: $gris solid;
       border-width: 0.1rem;
 

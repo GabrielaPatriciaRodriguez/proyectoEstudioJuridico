@@ -135,12 +135,13 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   font-weight: normal;
   font-size: 1rem;
   text-decoration: none;
-  /* transicion de 1segundo */
+  /* transicion de 1segundo VERRRRRRRRRRRRRRRRRRRR*/
   -webkit-transition: all 1s;
   transition: all 1s;
 }
 
 .lista__item--act {
+  /*Para que cuando este en la pagina el item este en color dorado */
   color: #c8b176;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
@@ -148,7 +149,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 
 .lista__item:hover {
   /*Cuando pase el mouse por el ancor de las listas el menu nav resalte la palabra en 
-     dorado y cambie el tamaño de la letra*/
+     dorado*/
   color: #c8b176;
 }
 
@@ -289,7 +290,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   background-color: #c8b176;
   border-radius: 2rem;
   padding: 0.5rem;
-  border-color: none;
+  border-style: none;
   color: #f2f2f2;
   font-size: 1.2rem;
 }
@@ -915,7 +916,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   background-color: #c8b176;
   border-radius: 2rem;
   padding: 0.5rem;
-  border-color: none;
+  border-style: none;
   color: #f2f2f2;
   font-size: 1.2rem;
 }
@@ -1434,6 +1435,9 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   padding-top: 25px;
   width: 20rem;
   border-width: 1px;
+}
+
+.fotoArea1:hover, .fotoArea2:hover, .fotoArea3:hover, .fotoArea4:hover, .fotoArea5:hover, .fotoArea6:hover {
   -webkit-box-shadow: 5px 5px 5px 5px #2f2d2d3f;
           box-shadow: 5px 5px 5px 5px #2f2d2d3f;
 }
@@ -2067,13 +2071,14 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-image: url(../assets/error.png);
+  background-image: url("https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804057/proyectoEstudio/assets/error_aeazny.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   height: 600px;
-  margin-top: 150px;
   overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (max-width: 425px) {
@@ -2084,5 +2089,9 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
     padding-left: 0px;
     margin-top: auto;
   }
+}
+
+.error__h1 {
+  margin-top: 12rem;
 }
 /*# sourceMappingURL=main.css.map */

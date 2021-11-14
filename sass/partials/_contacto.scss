@@ -1,4 +1,5 @@
 /* MAIN SECCION CONTACTO*/
+
 @import "./variables";
 @import "./fuente";
 @import "./responsive";
@@ -27,8 +28,6 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    // max-width: 1600px;
-    // max-height: 800px;
     padding-top: 4rem;
     padding-bottom: 4rem;
 
@@ -66,7 +65,6 @@
     margin: 0.5rem;
   }
 
-
   &__bg {
     width: 100%;
 
@@ -75,7 +73,7 @@
     }
   }
 
-//Formato de su consulta es bienvenida
+  //Formato de su consulta es bienvenida
   &__color {
     color: $blanco;
     font-size: 2rem;
@@ -83,7 +81,7 @@
     padding-top: 0rem;
   }
 
-// formato de checkbox
+  // formato de checkbox
   &__color1 {
     color: $blanco;
     font-size: 1.3rem;
@@ -113,7 +111,7 @@
       width: 100%;
       padding: 0.5rem;
       margin-right: 0.5rem;
-      
+
       @include movil {
         width: 100%;
       }
@@ -162,10 +160,10 @@
   border-radius: 2rem;
   padding: 0.5rem;
 
-    &:hover {
-      background-color: $dorado;
-      color: $gris;
-    }
+  &:hover {
+    background-color: $dorado;
+    color: $gris;
+  }
 }
 
 .enviar {
@@ -176,12 +174,12 @@
   background-color: $dorado;
   border-radius: 2rem;
   padding: 0.5rem;
-     
 
-    &:hover {
-      background-color: $gris;
-      color: $dorado;
-    }
+
+  &:hover {
+    background-color: $gris;
+    color: $dorado;
+  }
 }
 
 .preguntas {

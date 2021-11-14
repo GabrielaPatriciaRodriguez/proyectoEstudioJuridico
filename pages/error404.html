@@ -7,12 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Error 404</title>
 
+    <!-- Descripcion y palabras clave -->
     <meta name="description" content="Error 404">
     <meta name="keywords" content="Error">
 
 
     <!-- Loguito del Estudio -->
-    <link rel="shortcut icon" href="../assets/logosYColores/logo1.png" type="image/png">
+    <link rel="shortcut icon"
+        href="https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804057/proyectoEstudio/assets/logosYColores/logo1_h13jq0.png"
+        type="image/png">
     <!-- Iconos de facebook, Intagram y Twiter -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <!-- Libreria AOS -->
@@ -43,7 +46,8 @@
         <nav class="navbar navbar-expand-lg navbar-light encabezado__nav">
             <div class="container-fluid">
                 <a class="navbar-brand" href="../index.html"><img class="encabezado__logo"
-                        src="../assets/logosYColores/logo2.png" alt="logo" width="220vh" height="80vh"></a>
+                        src="https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804057/proyectoEstudio/assets/logosYColores/logo2_soiwbo.png"
+                        alt="logo" width="220vh" height="80vh"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -63,48 +67,55 @@
     </header>
 
     <main class="mainPrincipal error">
-        <!-- En construccion -->
+        <h1 class="error__h1">No hemos podido encontrar la pagina que buscas... <strong>LO SENTIMOS!!!</strong></h1>
     </main>
 
 
-    <footer class="pie">
+    <footer>
         <!-- pie de pagina -->
-        <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="pie__logo">
-            <a href="./index.html"><img src="../assets/logosYColores/blanco.png" alt="logo1" width="150"
-                    height="120"></a>
+        <div class="pie">
+            <div data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000" class="pie__logo">
+                <a href="./index.html"><img
+                        src="https://res.cloudinary.com/gabycoderhouse/image/upload/v1636804061/proyectoEstudio/assets/logosYColores/blanco_hjfdbi.png"
+                        alt="logo1" width="150" height="120"></a>
+            </div>
+            <div class="pie__pag">
+                <h3 class="pie__pag--tit">Páginas de Interes</h3>
+                <!-- Lista de paginas juridicas de interes -->
+                <ul class="pie__lista">
+                    <li><a href="https://www.pjn.gov.ar/" class="pie__lista--item">página web del poder judicial de la
+                            Nación</a>
+                    </li>
+                    <li><a href="http://www.juscorrientes.gov.ar/" class="pie__lista--item">página web del poder
+                            judicial de la
+                            Pcia.</a></li>
+                    <li><a href="https://iol.juscorrientes.gov.ar/" class="pie__lista--item">Iurix Online Pcia. de
+                            Corrientes</a>
+                    </li>
+                    <li><a href="https://colegioquinta.com/" class="pie__lista--item">página web del Colegio de
+                            Abogados</a></li>
+                </ul>
+            </div>
+            <div class="pie__dir">
+                <a href="../pages/contacto.html" class="pie__lista--item"><i class="fas fa-map-marker-alt"></i><strong>
+                        Av.
+                        Lavalle 291</strong><br>Ciudad - Provincia</a>
+                <p><i class="fas fa-phone-square"></i> Tel. 2658-5869</p>
+                <p><i class="far fa-envelope"></i> E-mail: estudjco@gmail.com</p>
+            </div>
+            <div class="redes">
+                <ul class="pie__redes">
+                    <!-- Lista de iconos: facebook, Instagram, Twiter -->
+                    <li class="pie__iconos"><a href="#"><i class="fab fa-facebook pie__iconos--color"></i></a></li>
+                    <li class="pie__iconos"><a href="#"><i class="fab fa-instagram pie__iconos--color"></i></a></li>
+                    <li class="pie__iconos"><a href="#"><i class="fab fa-whatsapp pie__iconos--color"></i></i></a></li>
+                </ul>
+            </div>
         </div>
-        <div class="pie__pag">
-            <h3 class="pie__pag--tit">Paginas de Interes</h3>
-            <!-- Lista de paginas juridicas de interes -->
-            <ul class="pie__lista">
-                <li><a href="https://www.pjn.gov.ar/" class="pie__lista--item">pagina web del poder judicial de la
-                        Nacion</a></li>
-                <li><a href="http://www.juscorrientes.gov.ar/" class="pie__lista--item">pagina web del poder judicial de
-                        la Pcia.</a></li>
-                <li><a href="https://iol.juscorrientes.gov.ar/" class="pie__lista--item">Iurix Online Pcia. de
-                        Corrientes</a></li>
-                <li><a href="https://colegioquinta.com/" class="pie__lista--item">pagina web del Colegio de Abogados</a>
-                </li>
-            </ul>
-        </div>
-        <div class="pie__dir">
-            <address><i class="fas fa-map-marker-alt"></i><strong> Av. Lavalle 291</strong><br>Ciudad - Provincia
-            </address>
-            <p><i class="fas fa-phone-square"></i> Tel. 2658-5869</p>
-            <p><i class="far fa-envelope"></i> E-mail: estudjco@gmail.com</p>
-        </div>
-        <div class="redes">
-            <ul class="pie__redes">
-                <!-- Lista de iconos: facebook, Instagram, Twiter -->
-                <li class="pie__iconos"><a href="#"><i class="fab fa-facebook pie__iconos--color"></i></a></li>
-                <li class="pie__iconos"><a href="#"><i class="fab fa-instagram pie__iconos--color"></i></a></li>
-                <li class="pie__iconos"><a href="#"><i class="fab fa-whatsapp pie__iconos--color"></i></i></a></li>
-            </ul>
+        <div class="copyright">
+            <p>Copyright <i class="far fa-copyright"></i> -Todos los derechos reservados-</p>
         </div>
     </footer>
-    <div class="copyright">
-        <p>Copyright <i class="far fa-copyright"></i> -Todos los derechos reservados-</p>
-    </div>
     <!-- Script de Libreria AOS -->
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>

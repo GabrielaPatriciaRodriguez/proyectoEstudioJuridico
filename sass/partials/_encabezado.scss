@@ -1,8 +1,6 @@
 @import "./variables";
 @import "./responsive";
 
-
-
 .encabezado {
   width: 100%;
 
@@ -95,17 +93,18 @@
     font-weight: normal;
     font-size: 1rem;
     text-decoration: none;
-    /* transicion de 1segundo */
+    /* transicion de 1segundo VERRRRRRRRRRRRRRRRRRRR*/
     transition: all 1s;
 
     &--act {
+      /*Para que cuando este en la pagina el item este en color dorado */
       color: $dorado;
       text-decoration-line: none;
     }
 
     &:hover {
       /*Cuando pase el mouse por el ancor de las listas el menu nav resalte la palabra en 
-     dorado y cambie el tamaño de la letra*/
+     dorado*/
       color: $dorado;
     }
   }
