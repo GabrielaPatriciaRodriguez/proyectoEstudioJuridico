@@ -264,7 +264,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
       align-content: center;
   background-color: #c8b176;
   border-radius: 2rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border-style: none;
   color: #f2f2f2;
   font-size: 1.2rem;
@@ -279,7 +279,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 
 .principal__texto--boton:hover {
   background-color: #3e474c;
-  color: #c8b176;
+  color: #f2f2f2;
 }
 
 .principal__texto--ancor {
@@ -560,7 +560,6 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 
 .pie__pag {
   padding-top: 2rem;
-  /*margen superior*/
   text-align: center;
 }
 
@@ -604,7 +603,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 
 .pie__lista {
   list-style: none;
-  /* sin viñetas */
+  padding-left: 0rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -614,11 +613,11 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 }
 
 .pie__lista--item {
+  list-style: none;
   color: #f2f2f2;
-  /* color de letra */
+  padding: 0.4rem;
   text-decoration: none;
   /*Sin subrayado */
-  padding-bottom: 1rem;
 }
 
 .pie__lista--item:hover {
@@ -627,30 +626,14 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 
 .pie__dir {
   /* La direccion en el pie de pagina*/
-  padding-top: 2.5rem;
-  line-height: 1.5rem;
-  /* interlineado */
+  padding-top: 2rem;
   color: #f2f2f2;
-  /* color de letra */
   text-align: center;
-}
-
-@media screen and (max-width: 425px) {
-  .pie__dir {
-    padding-top: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .pie__dir {
-    font-size: small;
-    line-height: 1rem;
-  }
 }
 
 .pie__redes {
   list-style: none;
+  padding-left: 0rem;
 }
 
 .pie__iconos, .encabezado__iconos {
@@ -781,7 +764,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   width: 100%;
   background-color: #f2f2f2;
   place-items: center;
-  padding: 20px;
+  padding: 1.5rem;
   overflow: hidden;
 }
 
@@ -811,7 +794,9 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 
 .nosotros__titulo {
   border-bottom: #3e474c solid;
-  border-width: 1px;
+  border-width: 0.1rem;
+  line-height: 2rem;
+  margin-top: 1rem;
 }
 
 .nosotros__item {
@@ -933,7 +918,6 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   size: 3rem;
   text-decoration: none;
   padding-right: 2rem;
-  margin: 0px;
   border-radius: 50%;
 }
 
@@ -966,7 +950,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   width: 100%;
   background-color: #f2f2f2;
   place-items: center;
-  padding: 20px;
+  padding: 1.5rem;
   overflow: hidden;
 }
 
@@ -1054,11 +1038,9 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   -ms-grid-column: 1;
   grid-area: foto1;
   background-color: #f6f2f2c2;
-  padding-top: 25px;
+  padding-top: 1.8rem;
   width: 20rem;
   border-width: 1px;
-  -webkit-box-shadow: boxshadowNosotros;
-          box-shadow: boxshadowNosotros;
 }
 
 @media screen and (max-width: 425px) {
@@ -1165,20 +1147,19 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   margin: 1rem;
 }
 
-@media screen and (max-width: 425px) {
-  .testimonios__secciones {
-    width: 100%;
-    font-size: 0.9rem;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .testimonios__secciones {
     width: 40rem;
     font-size: 0.9rem;
-    border-radius: 1rem;
     padding: 1rem;
     margin-right: 1rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .testimonios__secciones {
+    width: 100%;
+    font-size: 0.9rem;
   }
 }
 
@@ -1338,15 +1319,15 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
   padding-top: 1.2rem;
 }
 
-@media screen and (max-width: 425px) {
-  .formulario__color1 {
-    font-size: 1rem;
-  }
-}
-
 @media screen and (max-width: 768px) {
   .formulario__color1 {
     padding-bottom: 0rem;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .formulario__color1 {
+    font-size: 1rem;
   }
 }
 
@@ -1393,6 +1374,7 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 .mapa {
   width: 100%;
   height: 44rem;
+  padding: 0rem 1rem;
 }
 
 @media screen and (max-width: 768px) {
@@ -1408,42 +1390,67 @@ en los breakpoints declarados en las variables: $font-lock-min & $font-lock-max:
 }
 
 .boton, .reset, .enviar {
+  min-width: 8rem;
   border-style: none;
-  padding: 5px;
-  border-radius: 10px;
-  margin: 20px;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .botones {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+  }
 }
 
 .reset {
   border-color: #c8b176;
   color: #f2f2f2;
-  font-size: 1.2rem;
   background-color: #3e474c;
-  border-radius: 2rem;
-  padding: 0.5rem;
+}
+
+@media screen and (max-width: 425px) {
+  .reset {
+    margin-bottom: 1rem;
+    min-width: 5rem;
+  }
 }
 
 .reset:hover {
   background-color: #c8b176;
-  color: #3e474c;
+  color: #f2f2f2;
 }
 
 .enviar {
   border-color: #c8b176;
   color: #f2f2f2;
-  font-size: 1.2rem;
   background-color: #c8b176;
-  border-radius: 2rem;
-  padding: 0.5rem;
+}
+
+@media screen and (max-width: 425px) {
+  .enviar {
+    min-width: 5rem;
+  }
 }
 
 .enviar:hover {
   background-color: #3e474c;
-  color: #c8b176;
+  color: #f2f2f2;
 }
 
 .preguntas {
   background-color: #3e474c;
+}
+
+.accordion .accordion-item .accordion-button {
+  background-color: #3e474c;
+  color: #f2f2f2;
+}
+
+.accordion-body {
+  background-color: #3e474c;
+  color: #f2f2f2;
 }
 
 /* COLORES */

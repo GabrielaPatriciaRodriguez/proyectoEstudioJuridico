@@ -21,8 +21,8 @@
   /* utilizando gradientes para el fondo del footer*/
   background: rgb(200, 177, 118);
   background: -moz-linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
-  background: -webkit-linear-gradient(90deg,  rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
-  background: linear-gradient(90deg,  rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+  background: -webkit-linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+  background: linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
 
   &__logo {
@@ -32,7 +32,6 @@
     align-items: center;
 
     /* En movil no se vera el logo ni paginas de interes */
-
     @include movil {
       display: none;
     }
@@ -40,7 +39,6 @@
 
   &__pag {
     padding-top: 2rem;
-    /*margen superior*/
     text-align: center;
 
     &--tit {
@@ -51,6 +49,7 @@
       padding-bottom: 1rem;
       /* padding inferior*/
       text-align: center;
+
       @include font-size(1rem, 1.4rem);
 
       @include tablet {
@@ -65,19 +64,19 @@
 
   &__lista {
     list-style: none;
+    padding-left: 0rem;
 
-    /* sin viñetas */
     @include tablet {
       font-size: small;
     }
 
     &--item {
+      list-style: none;
       color: $blanco;
-      /* color de letra */
+      padding: 0.4rem;
       text-decoration: none;
       /*Sin subrayado */
-      padding-bottom: 1rem;
-      
+
       &:hover {
         color: $dorado;
       }
@@ -86,26 +85,14 @@
 
   &__dir {
     /* La direccion en el pie de pagina*/
-    padding-top: 2.5rem;
-    line-height: 1.5rem;
-    /* interlineado */
+    padding-top: 2rem;
     color: $blanco;
-    /* color de letra */
     text-align: center;
-
-    @include movil {
-      padding-top: 1.5rem;
-      line-height: 2rem;
-    }
-
-    @include tablet {
-      font-size: small;
-      line-height: 1rem;
-    }
   }
 
   &__redes {
     list-style: none;
+    padding-left: 0rem;
   }
 
   &__iconos {
@@ -157,8 +144,8 @@
   padding-top: 1rem;
   background: rgb(200, 177, 118);
   background: -moz-linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
-  background: -webkit-linear-gradient(90deg,  rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
-  background: linear-gradient(90deg,  rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+  background: -webkit-linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
+  background: linear-gradient(90deg, rgba(122, 107, 69, 0.975) 3%, rgba(62, 71, 76, 1) 93%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#c8b176", endColorstr="#3e474c", GradientType=1);
 
   color: $blanco;

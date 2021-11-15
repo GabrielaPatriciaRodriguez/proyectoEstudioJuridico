@@ -85,7 +85,7 @@
       align-content: center;
       background-color: $dorado;
       border-radius: 2rem;
-      padding: 0.5rem;
+      padding: 0.5rem 1rem;
       border-style: none;
       color: $blanco;
       font-size: 1.2rem;
@@ -97,7 +97,7 @@
 
       &:hover {
         background-color: $gris;
-        color: $dorado;
+        color: $blanco;
       }
     }
 
@@ -152,7 +152,7 @@
   overflow: hidden;
   justify-content: center;
 
-  
+
   @include tablet {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;

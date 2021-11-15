@@ -34,7 +34,7 @@
     width: 100%;
     background-color: $blanco;
     place-items: center;
-    padding: 20px;
+    padding: 1.5rem;
     overflow: hidden;
 
 
@@ -65,7 +65,9 @@
 
     &__titulo {
         border-bottom: $gris solid;
-        border-width: 1px;
+        border-width: 0.1rem;
+        line-height: 2rem;
+        margin-top: 1rem;
     }
 
 
@@ -149,7 +151,6 @@
     size: 3rem;
     text-decoration: none;
     padding-right: 2rem;
-    margin: 0px;
     border-radius: 50%;
 
     &__color {

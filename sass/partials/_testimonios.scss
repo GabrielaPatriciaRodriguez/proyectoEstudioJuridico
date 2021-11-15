@@ -43,17 +43,16 @@
     overflow: hidden;
     margin: 1rem;
 
-    @include movil {
-      width: 100%;
-      font-size: 0.9rem;
-    }
-
     @include tablet {
       width: 40rem;
       font-size: 0.9rem;
-      border-radius: 1rem;
       padding: 1rem;
       margin-right: 1rem;
+    }
+
+    @include movil {
+      width: 100%;
+      font-size: 0.9rem;
     }
   }
 
